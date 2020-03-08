@@ -61,6 +61,22 @@ class ProjectParticipation(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        try:
+            participant = self.participant.username
+        except:
+            participant = ""
+        try:
+            project = self.project.name
+        except:
+            project = ""
+        try:
+            role = self.role.name
+        except:
+            role = ""
+
+        return participant + " on " + project + " as " + role
+
 
 class Technology(models.Model):
     name = models.CharField(max_length=64)
@@ -83,9 +99,14 @@ class TechnologyUse(models.Model):
 
 
 class ProjectParticipationIssue(models.Model):
-    participation = models.ForeignKey('ProjectParticipation', null=False, related_name="issues", on_delete=models.CASCADE)
+    participation = models.ForeignKey(
+        ProjectParticipation,
+        null=False,
+        related_name="issues",
+        on_delete=models.CASCADE
+    )
     issue = models.TextField()
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    
+
