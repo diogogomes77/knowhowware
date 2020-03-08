@@ -64,6 +64,7 @@ class ProjectParticipation(models.Model):
 
 class Technology(models.Model):
     name = models.CharField(max_length=64)
+    parent = models.ForeignKey('Technology', null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
