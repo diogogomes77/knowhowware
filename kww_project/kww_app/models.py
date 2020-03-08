@@ -12,6 +12,12 @@ class Project(models.Model):
         related_name='participations',
         through_fields=["project", "participant"]
     )
+    technologies = models.ManyToManyField(
+        'Technology',
+        through='TechnologyUse',
+        related_name='projects',
+        through_fields=["project", "technology"]
+    )
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -23,7 +29,12 @@ class Project(models.Model):
 class Participant(User):
     onboard = models.DateField(null=True, blank=True)
     offboard = models.DateField(null=True, blank=True)
-
+    technologies = models.ManyToManyField(
+        'Technology',
+        through='TechnologyUse',
+        related_name='participants',
+        through_fields=["participant", "technology"]
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -49,3 +60,18 @@ class ProjectParticipation(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+
+class Technology(models.Model):
+    name = models.CharField(max_length=64)
+
+    def __str__(self):
+        return self.name
+
+
+class TechnologyUse(models.Model):
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, null=True)
+    technology = models.ForeignKey(Technology, on_delete=models.CASCADE, null=True)
+    participant = models.ForeignKey(Participant, on_delete=models.CASCADE, null=True)
+
+
