@@ -29,11 +29,22 @@ class ProjectParticipation(models.Model):
     participant = models.ForeignKey(
         Participant,
         related_name="projects",
-        on_delete=models.CASCADE)
+        null=True,
+        on_delete=models.SET_NULL
+    )
     start = models.DateField(null=True, blank=True)
     end = models.DateField(null=True, blank=True)
-    role = models.ForeignKey(Role, related_name="participations", on_delete=models.CASCADE)
-
+    role = models.ForeignKey(
+        Role,
+        related_name="participations",
+        null=True,
+        on_delete=models.SET_NULL
+    )
+    company = models.ForeignKey(
+        'Company',
+        null=True,
+        on_delete=models.SET_NULL
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
