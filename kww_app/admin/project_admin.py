@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from kww_app.admin.participation_admin import ProjectParticipationInline
 from kww_app.admin.technology_admin import TechnologyUseInline
-from kww_app.models import Project
+from kww_app.models import Project, ProjectType
 
 
 class ProjectAdmin(admin.ModelAdmin):
@@ -10,4 +10,5 @@ class ProjectAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Project, ProjectAdmin)
+admin.site.register(ProjectType)
 

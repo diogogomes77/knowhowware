@@ -15,7 +15,7 @@ class Technology(models.Model):
 
 class TechnologyUse(models.Model):
     technology = models.ForeignKey('Technology', on_delete=models.CASCADE, null=True)
-    projectparticipationn = models.ForeignKey(
+    projectparticipation = models.ForeignKey(
         'ProjectParticipation',
         on_delete=models.SET_NULL,
         null=True
