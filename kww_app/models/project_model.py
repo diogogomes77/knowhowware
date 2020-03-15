@@ -19,20 +19,13 @@ class Project(models.Model):
     participants = models.ManyToManyField(
         'Participant',
         through='ProjectParticipation',
-        related_name='participations',
         through_fields=["project", "participant"]
     )
-    technologies = models.ManyToManyField(
-        'Technology',
-        through='TechnologyUse',
-        related_name='projects',
-        through_fields=["project", "technology"]
-    )
-    company = models.ForeignKey(
+    companies = models.ManyToManyField(
         'Company',
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL
+        through='ProjectParticipation',
+        related_name='projects',
+        through_fields=["project", "company"]
     )
     parent = models.ForeignKey(
         'Project',
@@ -40,10 +33,9 @@ class Project(models.Model):
         blank=True,
         on_delete=models.SET_NULL
     )
-
-
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
+

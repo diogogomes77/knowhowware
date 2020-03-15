@@ -6,7 +6,7 @@ from kww_app.models import Project
 
 
 class ProjectAdmin(admin.ModelAdmin):
-    inlines = [ProjectParticipationInline, TechnologyUseInline, ]
+    inlines = [ProjectParticipationInline, ]#TechnologyUseInline, ]
 
 
 admin.site.register(Project, ProjectAdmin)

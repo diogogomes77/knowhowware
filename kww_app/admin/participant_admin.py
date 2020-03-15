@@ -6,7 +6,7 @@ from kww_app.models import Participant, Role
 
 
 class ParticipantAdmin(admin.ModelAdmin):
-    inlines = [ProjectParticipationInline, TechnologyUseInline, ]
+    inlines = [ProjectParticipationInline, ]#TechnologyUseInline, ]
 
 
 admin.site.register(Participant, ParticipantAdmin)

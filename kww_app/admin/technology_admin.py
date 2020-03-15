@@ -14,4 +14,3 @@ class TechnologyAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Technology, TechnologyAdmin)
-

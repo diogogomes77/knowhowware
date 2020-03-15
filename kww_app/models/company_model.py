@@ -20,6 +20,11 @@ class Company(models.Model):
         blank=True,
         on_delete=models.SET_NULL
     )
+    participants = models.ManyToManyField(
+        'Participant',
+        through='ProjectParticipation',
+        through_fields=['company', 'participant']
+    )
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

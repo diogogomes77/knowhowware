@@ -14,9 +14,12 @@ class Technology(models.Model):
 
 
 class TechnologyUse(models.Model):
-    project = models.ForeignKey('Project', on_delete=models.CASCADE, null=True)
     technology = models.ForeignKey('Technology', on_delete=models.CASCADE, null=True)
-    participant = models.ForeignKey('Participant', on_delete=models.CASCADE, null=True)
+    projectparticipationn = models.ForeignKey(
+        'ProjectParticipation',
+        on_delete=models.SET_NULL,
+        null=True
+    )
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
