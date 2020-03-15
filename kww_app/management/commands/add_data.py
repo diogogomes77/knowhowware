@@ -3,7 +3,8 @@ import random
 from django.core.management import BaseCommand
 from faker import Faker
 
-from kww_app.models import CompanyType, Company, Technology, Role, Participant, Project, ProjectType
+from kww_app.models import CompanyType, Company, Technology, Role, Participant, Project, ProjectType, \
+    ProjectParticipation, User
 
 
 class Command(BaseCommand):
@@ -11,11 +12,80 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         self.fake = Faker()
+
+        self.createsuperuser()
+
         self.create_companies()
         self.create_technologies()
         self.generate_participants()
+        self.generate_projects()
+        self.generate_participations()
+        self.generate_issues()
+
+    def createsuperuser(self):
+        admin = User.objects.create_user(
+            username='admin',
+            password='admin',
+            is_superuser=True,
+            is_staff=True
+        )
+
+    def generate_issues(self):
+        print('--- generate_issues ---')
+        fake = self.fake
+        participations = ProjectParticipation.objects.all()
+        for par in participations:
+            for i in range(random.randrange(1,5)):
+                par.issues.create(
+                    participation=par,
+                    issue=fake.text(max_nb_chars=1024, ext_word_list=None),
+                )
+
+    def generate_participations(self):
+        print('--- generate_participations ---')
+        companies0 = list(Company.objects.filter(parent__isnull=True))
+        companies1 = list(Company.objects.filter(parent__isnull=False))
+        participants = list(Participant.objects.all())
+
+        technologies = list(Technology.objects.all())
+
+        def add_technology(participation):
+            print('--- add_technology ---')
+            tech = None
+            par_techs = list(participation.technologies.all())
+            while not tech and tech not in par_techs:
+                tech = random.choice(technologies)
+            participation.add_technology(tech)
+
+        roles = list(Role.objects.all())
+
+        def add_participation(prjs):
+            print('--- add_participation ---')
+            for prj in prjs:
+                prj_participants = list(prj.participants.all())
+                participant = None
+                while not participant or participant in prj_participants:
+                    participant = random.choice(participants)
+                prj_companies = list(prj.companies.all())
+                company = None
+                while not company or company in prj_companies:
+                    company = random.choice(companies0)
+                company = random.choice(companies0)
+                role = random.choice(roles)
+                par_created = prj.add_participant(participant, role, company)
+                if par_created:
+                    for i in range(random.randrange(1,5)):
+                        add_technology(par_created)
+
+                comp_created = prj.add_company(company)
+
+        prjs0 = list(Project.objects.filter(parent__isnull=True))
+        add_participation(prjs0)
+        prjs1 = list(Project.objects.filter(parent__isnull=False))
+        add_participation(prjs1)
 
     def generate_projects(self):
+        print('--- generate_projects ---')
         if Project.objects.all().count() > 0:
             return
         fake = self.fake
@@ -26,15 +96,27 @@ class Command(BaseCommand):
                 name=name
             )
             prj_types.append(prj_type)
-
         prj0 = []
-        companies = list(Company.objects.all())
-        for i in range(10):
-            prj = Project.objects.create(
+
+        def create_project(parent=None):
+            print('--- create_project ---')
+            return Project.objects.create(
                 name=fake.text(max_nb_chars=16, ext_word_list=None),
+                projecttype=random.choice(prj_types),
+                parent=parent
+            )
+
+        for i in range(5):
+            prj = create_project()
+            prj0.append(prj)
+
+        for i in range(10):
+            create_project(
+                parent=random.choice(prj0)
             )
 
     def generate_participants(self):
+        print('--- generate_participants ---')
         fake = self.fake
 
         if Participant.objects.all().count() > 0:
@@ -57,11 +139,13 @@ class Command(BaseCommand):
             )
 
     def create_technologies(self):
+        print('--- create_technologies ---')
         fake = self.fake
         if Technology.objects.all().count() > 0:
             return
 
-        def generate(parents=None):
+        def generate_tech(parents=None):
+            print('--- generate_tech ---')
             tecs = []
             for i in range(5):
                 parent = None
@@ -72,13 +156,14 @@ class Command(BaseCommand):
                     parent=parent
                 )
                 tecs.append(tec)
-                return tecs
+            return tecs
 
-        tecs0 = generate()
-        tecs1 = generate(tecs0)
-        tecs2 = generate(tecs1)
+        tecs0 = generate_tech()
+        tecs1 = generate_tech(tecs0)
+        tecs2 = generate_tech(tecs1)
 
     def create_companies(self):
+        print('--- create_companies ---')
         fake = self.fake
         if Company.objects.all().count() > 0:
             return
@@ -87,7 +172,6 @@ class Command(BaseCommand):
             CompanyType.objects.create(name=ct)
 
         cts = list(CompanyType.objects.all())
-        # first level companies
         for i in range(5):
             Company.objects.create(
                 name=fake.company(),

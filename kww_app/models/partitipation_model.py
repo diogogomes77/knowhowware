@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 class ProjectParticipation(models.Model):
@@ -19,7 +21,7 @@ class ProjectParticipation(models.Model):
         null=True,
         on_delete=models.SET_NULL
     )
-    tecnologies = models.ManyToManyField(
+    technologies = models.ManyToManyField(
         'Technology',
         through='TechnologyUse',
         through_fields=['projectparticipation', 'technology']
@@ -72,3 +74,11 @@ class ProjectParticipationIssue(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+
+@receiver(post_save, sender=ProjectParticipation)
+def participation_company_add(sender, instance, created, **kwargs):
+    participation = instance
+    project = participation.project
+    company = participation.company
+    if company and not (company in project.companies.all()):
+        project.add_company(company)

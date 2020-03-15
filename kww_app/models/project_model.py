@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 class ProjectType(models.Model):
@@ -41,7 +43,7 @@ class Project(models.Model):
     def __str__(self):
         return self.name
 
-    def add_participant(self, participant):
+    def add_participant(self, participant, role=None, company=None):
         from kww_app.models import Participant
         if not isinstance(participant, Participant):
             return False
@@ -49,10 +51,10 @@ class Project(models.Model):
         prj_participation, created = ProjectParticipation.objects.get_or_create(
             project=self,
             participant=participant,
+            role=role,
+            company=company,
         )
-        if created:
-            return True
-        return False
+        return prj_participation
 
     def add_company(self, company):
         from kww_app.models import Company
@@ -63,7 +65,7 @@ class Project(models.Model):
             project=self,
             company=company,
         )
-        if created:
-            return True
-        return False
+        return prj_company
+
+
 
