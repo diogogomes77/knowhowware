@@ -1,10 +1,36 @@
 import random
+from io import BytesIO
+from unittest import mock
 
+from PIL import Image, ImageDraw, ImageFont
+from django.core.files import File
+from django.core.files.images import ImageFile
+from django.core.files.uploadedfile import SimpleUploadedFile
 from django.core.management import BaseCommand
 from faker import Faker
-
+from django.conf import settings
 from kww_app.models import CompanyType, Company, Technology, Role, Participant, Project, ProjectType, \
     ProjectParticipation, User
+
+
+def text_on_img(text="Hello", size=12, upload_to=None):
+    image_name = text + '.jpg'
+    filename = settings.MEDIA_ROOT + '/' + settings.PROJECT_IMAGES + image_name
+    print('filename= ' + filename)
+    "Draw a text on an Image, saves it, show it"
+    fnt = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', size)
+    # create image
+    image = Image.new(
+        mode="RGB",
+        size=(int(size/2)*len(text), size+50), color="red")
+    draw = ImageDraw.Draw(image)
+    # draw text
+    draw.text((10, 10), text, font=fnt, fill=(255, 255, 0))
+    # save file
+    #image_file = BytesIO()
+    #image.save(image_file, 'PNG')  # or whatever format you prefer
+    image.save(filename)
+    return image_name
 
 
 class Command(BaseCommand):
@@ -98,21 +124,41 @@ class Command(BaseCommand):
             prj_types.append(prj_type)
         prj0 = []
 
-        def create_project(parent=None):
+        def create_project(parent=None, i=None):
             print('--- create_project ---')
-            return Project.objects.create(
-                name=fake.text(max_nb_chars=16, ext_word_list=None),
-                projecttype=random.choice(prj_types),
-                parent=parent
+            #content_path = settings.MEDIA_URL + settings.PROJECT_IMAGES
+
+            name = text_on_img(text=str(i) + "***", size=100)
+            content_path = settings.MEDIA_ROOT + '/' + settings.PROJECT_IMAGES + name
+            uploaded_image = SimpleUploadedFile(
+                    name=name,
+                    content=open(content_path, 'rb').read(),
+                    content_type='image/jpeg'
             )
 
-        for i in range(5):
-            prj = create_project()
+            #file_mock = mock.MagicMock(spec=File, name='FileMock_' + str(i))
+            name = fake.text(max_nb_chars=16, ext_word_list=None)
+            #image_file = text_on_img(text=name)
+            #image = Image.new('RGBA', size=(50, 50), color=(256, 0, 0))
+            #image_file = BytesIO()
+            #image.save(image_file, 'PNG')  # or whatever format you prefer
+            #file = ImageFile(text_on_img(text="image_"+str(i), size=100))
+            return Project.objects.create(
+                name=name,
+                projecttype=random.choice(prj_types),
+                parent=parent,
+                #image=text_on_img(text="image_"+str(i), size=100)
+                image=uploaded_image
+            )
+
+        for i in range(0, 4):
+            prj = create_project(i=i)
             prj0.append(prj)
 
-        for i in range(10):
+        for i in range(5, 15):
             create_project(
-                parent=random.choice(prj0)
+                parent=random.choice(prj0),
+                i=i
             )
 
     def generate_participants(self):

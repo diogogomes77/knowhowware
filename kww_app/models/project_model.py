@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.utils.safestring import mark_safe
+from django.conf import settings
 
 
 class ProjectType(models.Model):
@@ -42,12 +43,12 @@ class Project(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     image = models.ImageField(
-        upload_to='projects/images/',
+        upload_to=settings.PROJECT_IMAGES,
         null=True,
         blank=True
     )
     file = models.FileField(
-        upload_to='projects/files/',
+        upload_to=settings.PROJECT_FILES,
         null=True,
         blank=True
     )
