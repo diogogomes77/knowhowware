@@ -18,11 +18,12 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from kww_app.views import HomeView
+from kww_app.views import HomeView, ProjectsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomeView.as_view(), name='home')
+    path('', HomeView.as_view(), name='home'),
+    path('projects', ProjectsView.as_view(), name='projects')
 ]
 
 if settings.DEBUG:
