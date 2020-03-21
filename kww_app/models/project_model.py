@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils.safestring import mark_safe
 
 
 class ProjectType(models.Model):
@@ -39,6 +40,22 @@ class Project(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    image = models.ImageField(
+        upload_to='projects/images/',
+        null=True,
+        blank=True
+    )
+    file = models.FileField(
+        upload_to='projects/files/',
+        null=True,
+        blank=True
+    )
+
+    def image_tag(self):
+        return mark_safe('<img src="/media/%s" width="150" height="150" />' % (self.image))
+
+    image_tag.short_description = 'Image'
 
     def __str__(self):
         return self.name

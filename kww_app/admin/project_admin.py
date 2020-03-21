@@ -10,6 +10,8 @@ class ProjectCompanyInline(admin.TabularInline):
 
 class ProjectAdmin(admin.ModelAdmin):
     inlines = [ProjectParticipationInline, ProjectCompanyInline, ]
+    #fields = ['image_tag']
+    readonly_fields = ['image_tag']
 
 
 admin.site.register(Project, ProjectAdmin)

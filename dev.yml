@@ -26,9 +26,45 @@ services:
     restart: always
     volumes:
       - .:/code/
+      - ./private:/private/
     env_file:
       - ./environment/dev/django.env
     command: python manage.py runserver 0.0.0.0:8000
+
+  nginx:
+    restart: always
+    image: nginx
+    volumes:
+      - "./confs-docker/nginx/:/etc/nginx/sites-available/"
+      - "./confs-docker/nginx/:/etc/nginx/sites-enabled/"
+      - "./confs-docker/nginx/:/etc/nginx/conf.d/"
+      - "./confs-docker/nginx.conf:/etc/nginx/nginx.conf"
+      - ./static:/static
+      - ./private:/private/
+      - ./media:/media/
+    ports:
+      - "8080:80"
+    command: nginx -g "daemon off;"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "5"
+
+  minio:
+    image: minio/minio
+    volumes:
+      - ./minio_data:/data
+    ports:
+      - "9000:9000"
+    env_file:
+      - ./environment/dev/django.env
+    command: server /data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
 
 volumes:
   db-data:
