@@ -1,8 +1,10 @@
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.urls import reverse
 from django.utils.safestring import mark_safe
 from django.conf import settings
+from django.utils.text import slugify
 
 
 class ProjectType(models.Model):
@@ -53,6 +55,12 @@ class Project(models.Model):
         blank=True
     )
 
+    #slug = models.SlugField(max_length=31, unique=True, null=True)
+
+    def _save(self, *args, **kwargs):
+        #self.slug = slugify(self.name, allow_unicode=True)
+        return super(Project, self).save(*args, **kwargs)
+
     def image_tag(self):
         return mark_safe('<img src="/media/%s" width="150" height="150" />' % (self.image))
 
@@ -60,6 +68,13 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def slug(self):
+        return str(self.id)
+
+    def get_absolute_url(self):
+        return reverse('project-detail', args=[str(self.slug)])
 
     def add_participant(self, participant, role=None, company=None):
         from kww_app.models import Participant

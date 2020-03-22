@@ -1,13 +1,13 @@
 {% extends 'kww_app/base.html' %}
 
 {% block content %}
-<h1 class="mt-4">Projects</h1>
+<h1 class="mt-4">Project {{ project.name}}</h1>
+<img src="{{ project.image.url }}">
 <div class="list-group list-group-flush">
-    {% for project in project_list %}
-        <a href="{{ project.get_absolute_url }}" class="list-group-item list-group-item-action bg-light">{{ project.name}}</a>
+    {% for participation in project.participations.all %}
+        <a href="{{ participation.get_absolute_url }}" class="list-group-item list-group-item-action bg-light">{{ participation.participant.username}}</a>
     {% endfor %}
 </div>
-    </br>
 <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
 <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
 

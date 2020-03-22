@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.urls import reverse
 
 
 class Participant(User):
@@ -14,6 +15,13 @@ class Participant(User):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    @property
+    def slug(self):
+        return str(self.id)
+
+    def get_absolute_url(self):
+        return reverse('participant-detail', args=[str(self.slug)])
 
 
 class Role(models.Model):

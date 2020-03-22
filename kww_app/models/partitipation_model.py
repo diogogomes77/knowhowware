@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.urls import reverse
 
 
 class ProjectParticipation(models.Model):
@@ -32,6 +33,13 @@ class ProjectParticipation(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    @property
+    def slug(self):
+        return str(self.id)
+
+    def get_absolute_url(self):
+        return reverse('participation-detail', args=[str(self.slug)])
 
     def add_technology(self, tech):
         from kww_app.models import Technology
