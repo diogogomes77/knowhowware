@@ -1,6 +1,12 @@
+from urllib.parse import urlparse
+
 from django.contrib.auth.models import User
 from django.db import models
+from django.http import HttpResponse
 from django.urls import reverse
+from minio_storage.storage import MinioMediaStorage
+
+storage = MinioMediaStorage()
 
 
 class Participant(User):
@@ -16,12 +22,18 @@ class Participant(User):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    photo = models.ImageField(
+        null=True,
+        storage=storage
+    )
+
     @property
     def slug(self):
         return str(self.id)
 
     def get_absolute_url(self):
         return reverse('participant-detail', args=[str(self.slug)])
+
 
 
 class Role(models.Model):

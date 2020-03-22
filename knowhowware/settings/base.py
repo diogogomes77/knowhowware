@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'kww_app',
+    'minio_storage',
 ]
 
 MIDDLEWARE = [
@@ -144,3 +145,17 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 PROJECT_IMAGES = 'projects/images/'
 PROJECT_FILES = 'projects/files/'
+
+#DEFAULT_FILE_STORAGE = "minio_storage.storage.MinioMediaStorage"
+#STATICFILES_STORAGE = "minio_storage.storage.MinioStaticStorage"
+MINIO_STORAGE_ENDPOINT = 'minio:80'
+MINIO_STORAGE_ACCESS_KEY = 'AKIAIOSFODNN7EXAMPLE'
+MINIO_STORAGE_SECRET_KEY = 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
+MINIO_STORAGE_USE_HTTPS = False
+MINIO_STORAGE_MEDIA_BUCKET_NAME = 'local-media'
+MINIO_STORAGE_AUTO_CREATE_MEDIA_BUCKET = True
+MINIO_STORAGE_STATIC_BUCKET_NAME = 'local-static'
+MINIO_STORAGE_AUTO_CREATE_STATIC_BUCKET = True
+#MINIO_STORAGE_STATIC_URL = 'minio'
+MINIO_STORAGE_STATIC_USE_PRESIGNED = True
+MINIO_STORAGE_MEDIA_USE_PRESIGNED = True

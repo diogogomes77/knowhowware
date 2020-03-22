@@ -1,4 +1,8 @@
-from django.shortcuts import render
+from urllib.parse import urlparse
+
+from django.core.files import File
+from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.views import generic
 
@@ -95,4 +99,21 @@ class ParticipantDetailView(generic.DetailView):
         context['now'] = timezone.now()
         return context
 
+
+def download(self, id):
+    participant = Participant.objects.get(pk=id)
+    file = participant.photo
+    # Check permissions, do logging, whatever.
+    url = file.url
+    # http://minio:9000/local-media/photo_LeZoHma.jpg
+    print('file.url= ' + str(url))
+    file_name = participant.username
+    protocol = urlparse(url).scheme
+    # Let NGINX handle it
+    response = HttpResponse()
+    response['X-Accel-Redirect'] = '/file_download/' + protocol + '/' + url.replace(protocol + '://', '')
+    response['Content-Disposition'] = 'attachment; filename="{}"'.format(file_name)
+    print('X-Accel-Redirect= ' + str(response['X-Accel-Redirect']))
+    print('Content-Disposition= ' + str(response['Content-Disposition']))
+    return response
 
