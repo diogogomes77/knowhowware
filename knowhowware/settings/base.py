@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'kww_app',
     'minio_storage',
+    #'django_extensions'
 ]
 
 MIDDLEWARE = [

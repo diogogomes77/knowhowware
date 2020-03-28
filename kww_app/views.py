@@ -100,7 +100,7 @@ class ParticipantDetailView(generic.DetailView):
         return context
 
 
-def download(self, id):
+def download(request, id):
     participant = Participant.objects.get(pk=id)
     file = participant.photo
     # Check permissions, do logging, whatever.

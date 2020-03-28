@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1 class="mt-4">Participant {{ participant.username}}</h1>
-<img src="{{ participant.photo.url }}">
+<img src="{% url 'download' participant.id %}">
     <a href="{% url 'download' participant.id %}">download photo</a>
 <div class="list-group list-group-flush">
     {% for project in participant.projects.all %}
