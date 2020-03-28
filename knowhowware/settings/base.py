@@ -35,17 +35,28 @@ if ALLOWED_HOSTS:
 
 # Application definition
 
-INSTALLED_APPS = [
+DEFAULT_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'kww_app',
-    'minio_storage',
-    #'django_extensions'
 ]
+
+THIRD_PARTY_APPS = [
+    'minio_storage',
+    'taggit',
+    'taggit_autosuggest',
+    'django_object_actions'
+]
+
+LOCAL_APPS = [
+    'kww_app',
+    'reports',
+]
+
+INSTALLED_APPS = LOCAL_APPS + THIRD_PARTY_APPS + DEFAULT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

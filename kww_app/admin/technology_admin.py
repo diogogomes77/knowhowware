@@ -1,7 +1,5 @@
 from django.contrib import admin
-
-from kww_app.models import Project, Participant, ProjectParticipation, Role, Technology, TechnologyUse, \
-    ProjectParticipationIssue
+from kww_app.models import Technology, TechnologyUse
 
 
 class TechnologyUseInline(admin.TabularInline):
@@ -10,7 +8,7 @@ class TechnologyUseInline(admin.TabularInline):
 
 
 class TechnologyAdmin(admin.ModelAdmin):
-    inlines = [TechnologyUseInline, ]
+    inlines = [TechnologyUseInline,]
 
 
 admin.site.register(Technology, TechnologyAdmin)

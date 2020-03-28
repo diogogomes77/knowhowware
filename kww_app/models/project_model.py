@@ -1,3 +1,4 @@
+from django.contrib.contenttypes.fields import GenericRelation
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -5,6 +6,7 @@ from django.urls import reverse
 from django.utils.safestring import mark_safe
 from django.conf import settings
 from django.utils.text import slugify
+from taggit_autosuggest.managers import TaggableManager
 
 
 class ProjectType(models.Model):
@@ -55,6 +57,7 @@ class Project(models.Model):
         blank=True
     )
 
+    tags = TaggableManager()
     #slug = models.SlugField(max_length=31, unique=True, null=True)
 
     def _save(self, *args, **kwargs):

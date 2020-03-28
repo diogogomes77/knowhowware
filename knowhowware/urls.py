@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -17,6 +17,7 @@ urlpatterns = [
     path('participants/<int:pk>', views.ParticipantDetailView.as_view(), name='participant-detail'),
 
     path('download/<int:id>/', download, name='download'),
+    path('taggit_autosuggest/', include('taggit_autosuggest.urls')),
 ]
 
 if settings.DEBUG:
