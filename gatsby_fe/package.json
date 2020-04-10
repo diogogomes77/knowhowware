@@ -1,0 +1,17 @@
+{
+  "name": "gatsby_fe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gatsby develop -p 9988 -o"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gatsby": "^2.20.16",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
