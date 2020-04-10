@@ -48,12 +48,14 @@ THIRD_PARTY_APPS = [
     'minio_storage',
     'taggit',
     'taggit_autosuggest',
-    'django_object_actions'
+    'django_object_actions',
+    'rest_framework',
 ]
 
 LOCAL_APPS = [
     'kww_app',
     'reports',
+    'frontend',
 ]
 
 INSTALLED_APPS = LOCAL_APPS + THIRD_PARTY_APPS + DEFAULT_APPS
@@ -171,3 +173,5 @@ MINIO_STORAGE_AUTO_CREATE_STATIC_BUCKET = True
 #MINIO_STORAGE_STATIC_URL = 'minio'
 MINIO_STORAGE_STATIC_USE_PRESIGNED = True
 MINIO_STORAGE_MEDIA_USE_PRESIGNED = True
+
+CELERY_BROKER_URL = 'amqp://rabbitmq'

@@ -20,3 +20,6 @@ django-taggit
 django-taggit-autosuggest
 weasyprint
 django-object-actions
+django-rest-framework
+celery
+flower

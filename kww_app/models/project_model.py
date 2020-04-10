@@ -72,6 +72,9 @@ class Project(models.Model):
     def __str__(self):
         return self.name
 
+    def download(self):
+        pass
+
     @property
     def slug(self):
         return str(self.id)

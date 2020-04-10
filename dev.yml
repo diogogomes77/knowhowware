@@ -54,7 +54,9 @@ services:
   minio:
     image: minio/minio
     volumes:
-      - ./minio_data:/data
+      #- ./minio_data:/data
+      #- minio_sys:/data/.minio.sys/
+      - minio_sys:/data
     ports:
       - "9000:9000"
     env_file:
@@ -66,7 +68,49 @@ services:
       timeout: 20s
       retries: 3
 
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: rabbitmq # this way it always starts on the same hostname, preventing multiple log folders
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq/ # creates one logging folder only, maps the full folder
+    ports:
+      - "5672:5672"
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"
+
+  celery:
+    build:
+      context: .
+      dockerfile: ./dockerfile/django/Dockerfile
+    restart: always
+    ports:
+      - "5555:5555"
+    volumes:
+      - .:/code/
+    env_file:
+      - ./environment/dev/django.env
+    #command: celery worker -A kww_project -B -E -l info -Q backup,celery --autoscale=4,1
+    command: celery -A knowhowware flower
+
+  flower:
+    build:
+      context: .
+      dockerfile: ./dockerfile/django/Dockerfile
+    restart: always
+    volumes:
+      - .:/code/
+    env_file:
+      - ./environment/dev/django.env
+    #command: celery worker -A kww_project -B -E -l info -Q backup,celery --autoscale=4,1
+    command: celery -A knowhowware worker -l info
+
 volumes:
   db-data:
+  rabbitmq_data:
+  minio_sys:
 
 
