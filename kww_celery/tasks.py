@@ -7,3 +7,6 @@ def celery_task(counter):
     email = "hassanzadeh.sd@gmail.com"
     time.sleep(30)
     return '{} Done!'.format(counter)
+
+
+

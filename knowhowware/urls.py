@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, reverse
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -9,7 +9,7 @@ from kww_app.api import ProjectViewSet
 from kww_app.views import download
 from rest_framework import routers
 
-from kww_celery.views import celery_view
+from kww_celery.views import celery_view, CreateView, DetailView, IndexView
 
 router = routers.DefaultRouter()
 router.register('api/projects', ProjectViewSet, 'projects')
@@ -30,6 +30,11 @@ urlpatterns = [
     path('frontend/', index),
 
     path('celerytask/', celery_view),
+    path('person/add/', CreateView.as_view(),
+         name='person-create'
+         ),
+    path('person/<int:pk>/', DetailView.as_view(), name='person-detail'),
+    path('person/', IndexView.as_view(), name='person-list'),
 
 ]
 

@@ -56,6 +56,7 @@ LOCAL_APPS = [
     'kww_app',
     'reports',
     'frontend',
+    'kww_celery'
 ]
 
 INSTALLED_APPS = LOCAL_APPS + THIRD_PARTY_APPS + DEFAULT_APPS

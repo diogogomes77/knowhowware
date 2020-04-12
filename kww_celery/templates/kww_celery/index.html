@@ -1,0 +1,13 @@
+{% if persons %}
+    <ul>
+    {% for person in persons %}
+        <li><a href="/person/{{ person.id }}/">{{ person.name }}</a>
+        {% if person.age == None %} Calculating age
+        {% else %}{{ person.age }}
+        {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No persons are available.</p>
+{% endif %}
