@@ -15,6 +15,8 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from celery.schedules import crontab
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Quick-start development settings - unsuitable for production
@@ -50,6 +52,7 @@ THIRD_PARTY_APPS = [
     'taggit_autosuggest',
     'django_object_actions',
     'rest_framework',
+    'django_celery_beat',
 ]
 
 LOCAL_APPS = [
@@ -176,3 +179,4 @@ MINIO_STORAGE_STATIC_USE_PRESIGNED = True
 MINIO_STORAGE_MEDIA_USE_PRESIGNED = True
 
 CELERY_BROKER_URL = 'amqp://rabbitmq'
+

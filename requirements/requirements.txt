@@ -23,3 +23,4 @@ django-object-actions
 django-rest-framework
 celery
 flower
+django-celery-beat

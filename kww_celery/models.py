@@ -21,20 +21,35 @@ class PersonAge(models.Model):
         self.name = name
         self.born = born
 
+    def calculate_age(self):
+        today = date.today()
+        birth_date = self.born
+        age = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
+        if age != self.age:
+            self.age = age
+            time.sleep(age)
+            self.save()
+        print('finished calculating age')
+        # return age
+
 
 @shared_task
 def calculate_age(id):
     print('started calculating age')
     person = PersonAge.objects.get(pk=id)
     print('personn= ' + str(person))
-    today = date.today()
-    birth_date = person.born
-    age = today.year - birth_date.year - ((today.month, today.day) <(birth_date.month, birth_date.day))
-    person.age = age
-    time.sleep(30)
-    person.save()
+    person.calculate_age()
     print('finished calculating age')
     #return age
+
+
+@shared_task
+def calculatea_age_all():
+    print('started calculatea_age_all')
+    persons = PersonAge.objects.filter(age__isnull=True)
+    for person in persons:
+        person.calculate_age()
+    print('finished calculatea_age_all')
 
 
 @receiver(post_save, sender=PersonAge)
