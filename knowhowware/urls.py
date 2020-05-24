@@ -14,8 +14,11 @@ from kww_celery.views import celery_view, CreateView, DetailView, IndexView
 router = routers.DefaultRouter()
 router.register('api/projects', ProjectViewSet, 'projects')
 
+
 urlpatterns = [
+    #path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
     path('admin/', admin.site.urls),
+    path('baton/', include('baton.urls')),
     path('', views.HomeView.as_view(), name='home'),
     path('projects', views.ProjectListView.as_view(), name='project-list'),
     path('projects/<int:pk>', views.ProjectDetailView.as_view(), name='project-detail'),
@@ -35,6 +38,7 @@ urlpatterns = [
          ),
     path('person/<int:pk>/', DetailView.as_view(), name='person-detail'),
     path('person/', IndexView.as_view(), name='person-list'),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 
 ]
 

@@ -1,3 +1,4 @@
+from ckeditor.fields import RichTextField
 from django.contrib.contenttypes.fields import GenericRelation
 from django.db import models
 from django.db.models.signals import post_save
@@ -57,8 +58,10 @@ class Project(models.Model):
         blank=True
     )
 
-    tags = TaggableManager()
+    tags = TaggableManager(blank=True)
     #slug = models.SlugField(max_length=31, unique=True, null=True)
+
+    content = RichTextField(config_name='example', null=True, blank=True)
 
     def _save(self, *args, **kwargs):
         #self.slug = slugify(self.name, allow_unicode=True)

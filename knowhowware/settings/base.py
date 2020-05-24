@@ -38,6 +38,8 @@ if ALLOWED_HOSTS:
 # Application definition
 
 DEFAULT_APPS = [
+    'baton',
+    #'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,19 +49,23 @@ DEFAULT_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    'baton.autodiscover',
     'minio_storage',
     'taggit',
     'taggit_autosuggest',
     'django_object_actions',
     'rest_framework',
     'django_celery_beat',
+    'ckeditor',
+    'ckeditor_uploader'
 ]
 
 LOCAL_APPS = [
     'kww_app',
     'reports',
     'frontend',
-    'kww_celery'
+    'kww_celery',
+    'kww_edu'
 ]
 
 INSTALLED_APPS = LOCAL_APPS + THIRD_PARTY_APPS + DEFAULT_APPS
@@ -179,4 +185,130 @@ MINIO_STORAGE_STATIC_USE_PRESIGNED = True
 MINIO_STORAGE_MEDIA_USE_PRESIGNED = True
 
 CELERY_BROKER_URL = 'amqp://rabbitmq'
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_CONFIGS = {
+    'awesome_ckeditor': {
+        'toolbar': 'Basic',
+    },
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 300,
+    },
+    'custom': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ]
+    },
+    'example': {
+        'skin': 'moono',
+        # 'skin': 'office2013',
+        'toolbar_Basic': [
+            ['Source', '-', 'Bold', 'Italic']
+        ],
+        'toolbar_YourCustomToolbarConfig': [
+            {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},
+            {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
+            {'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll']},
+            {'name': 'forms',
+             'items': ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton',
+                       'HiddenField']},
+            '/',
+            {'name': 'basicstyles',
+             'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
+            {'name': 'paragraph',
+             'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-',
+                       'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl',
+                       'Language']},
+            {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor']},
+            {'name': 'insert',
+             'items': ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe']},
+            '/',
+            {'name': 'styles', 'items': ['Styles', 'Format', 'Font', 'FontSize']},
+            {'name': 'colors', 'items': ['TextColor', 'BGColor']},
+            {'name': 'tools', 'items': ['Maximize', 'ShowBlocks']},
+            {'name': 'about', 'items': ['About']},
+            '/',  # put this to force next toolbar on new line
+            {'name': 'yourcustomtools', 'items': [
+                # put the name of your editor.ui.addButton here
+                'Preview',
+                'Maximize',
+
+            ]},
+        ],
+        'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
+        # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
+        # 'height': 291,
+        # 'width': '100%',
+        # 'filebrowserWindowHeight': 725,
+        # 'filebrowserWindowWidth': 940,
+        # 'toolbarCanCollapse': True,
+        # 'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
+        'tabSpaces': 4,
+        'extraPlugins': ','.join([
+            'uploadimage', # the upload image feature
+            # your extra plugins here
+            'div',
+            'autolink',
+            'autoembed',
+            'embedsemantic',
+            'autogrow',
+            # 'devtools',
+            'widget',
+            'lineutils',
+            'clipboard',
+            'dialog',
+            'dialogui',
+            'elementspath'
+        ]),
+    }
+}
+
+BATON = {
+    'SITE_HEADER': 'Baton',
+    'SITE_TITLE': 'Baton',
+    'INDEX_TITLE': 'Site administration',
+    'SUPPORT_HREF': 'https://github.com/otto-torino/django-baton/issues',
+    'COPYRIGHT': 'copyright © 2017 <a href="https://www.otto.to.it">Otto srl</a>', # noqa
+    'POWERED_BY': '<a href="https://www.otto.to.it">Otto srl</a>',
+    'CONFIRM_UNSAVED_CHANGES': True,
+    'SHOW_MULTIPART_UPLOADING': True,
+    'ENABLE_IMAGES_PREVIEW': True,
+    'MENU': (
+        { 'type': 'title', 'label': 'main', 'apps': ('auth', ) },
+        {
+            'type': 'app',
+            'name': 'auth',
+            'label': 'Authentication',
+            'icon': 'fa fa-lock',
+            'models': (
+                {
+                    'name': 'user',
+                    'label': 'Users'
+                },
+                {
+                    'name': 'group',
+                    'label': 'Groups'
+                },
+            )
+        },
+        { 'type': 'title', 'label': 'Contents', 'apps': ('flatpages', ) },
+        { 'type': 'model', 'label': 'Pages', 'name': 'flatpage', 'app': 'flatpages' },
+        { 'type': 'free', 'label': 'Custom Link', 'url': 'http://www.google.it', 'perms': ('flatpages.add_flatpage', 'auth.change_user') },
+        { 'type': 'free', 'label': 'My parent voice', 'children': [
+            { 'type': 'model', 'label': 'A Model', 'name': 'mymodelname', 'app': 'myapp' },
+            { 'type': 'free', 'label': 'Another custom link', 'url': 'http://www.google.it' },
+        ] },
+    ),
+    'ANALYTICS': {
+        'CREDENTIALS': os.path.join(BASE_DIR, 'credentials.json'),
+        'VIEW_ID': '12345678',
+    }
+}
 
