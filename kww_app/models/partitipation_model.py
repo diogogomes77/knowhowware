@@ -1,3 +1,4 @@
+from ckeditor.fields import RichTextField
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -77,10 +78,31 @@ class ProjectParticipationIssue(models.Model):
         related_name="issues",
         on_delete=models.CASCADE
     )
-    issue = models.TextField()
+    issue = RichTextField(config_name='awesome_ckeditor', null=True, blank=True)
+    technology = models.ForeignKey(
+        'Technology',
+        null=True, blank=True,
+        related_name="issues",
+        on_delete=models.CASCADE
+    )
+    # technologies = models.ManyToManyField(
+    #     'Technology',
+    #     through='TechnologieIssue',
+    #     through_fields=['issue', 'technology']
+    # )
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+
+class TechnologieIssue(models.Model):
+    technology = models.ForeignKey('Technology', on_delete=models.CASCADE, null=True)
+    issue = models.ForeignKey(
+        ProjectParticipationIssue,
+        on_delete=models.SET_NULL,
+        null=True
+    )
+    description = RichTextField(config_name='awesome_ckeditor', null=True, blank=True)
 
 
 @receiver(post_save, sender=ProjectParticipation)
