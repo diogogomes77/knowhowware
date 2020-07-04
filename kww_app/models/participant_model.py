@@ -24,6 +24,7 @@ class Participant(User):
 
     photo = models.ImageField(
         null=True,
+        blank=True,
         storage=storage
     )
 

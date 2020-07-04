@@ -93,48 +93,48 @@ services:
         max-size: "50m"
         max-file: "5"
 
-  celery-worker:
-    image: kww-django:3
-    restart: on-failure
-    depends_on:
-      - db
-      - rabbitmq
-    volumes:
-      - .:/code/
-    env_file:
-      - ./environment/dev/django.env
-    #command: celery worker -A kww_project -B -E -l info -Q backup,celery --autoscale=4,1
-    # celery -A proj beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
-    command: celery -A knowhowware worker -l info
-
-  celery-beat:
-    image: kww-django:3
-    restart: on-failure
-    depends_on:
-      - db
-      - rabbitmq
-    volumes:
-      - .:/code/
-    env_file:
-      - ./environment/dev/django.env
-    #command: celery worker -A kww_project -B -E -l info -Q backup,celery --autoscale=4,1
-    # celery -A proj beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
-    command: celery -A knowhowware beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
-
-  flower:
-    image: kww-django:3
-    restart: on-failure
-    depends_on:
-      - db
-      - rabbitmq
-    ports:
-      - "5555:5555"
-    volumes:
-      - .:/code/
-    env_file:
-      - ./environment/dev/django.env
-    #command: celery worker -A kww_project -B -E -l info -Q backup,celery --autoscale=4,1
-    command: celery -A knowhowware flower
+#  celery-worker:
+#    image: kww-django:3
+#    restart: on-failure
+#    depends_on:
+#      - db
+#      - rabbitmq
+#    volumes:
+#      - .:/code/
+#    env_file:
+#      - ./environment/dev/django.env
+#    #command: celery worker -A kww_project -B -E -l info -Q backup,celery --autoscale=4,1
+#    # celery -A proj beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+#    command: celery -A knowhowware worker -l info
+#
+#  celery-beat:
+#    image: kww-django:3
+#    restart: on-failure
+#    depends_on:
+#      - db
+#      - rabbitmq
+#    volumes:
+#      - .:/code/
+#    env_file:
+#      - ./environment/dev/django.env
+#    #command: celery worker -A kww_project -B -E -l info -Q backup,celery --autoscale=4,1
+#    # celery -A proj beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+#    command: celery -A knowhowware beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+#
+#  flower:
+#    image: kww-django:3
+#    restart: on-failure
+#    depends_on:
+#      - db
+#      - rabbitmq
+#    ports:
+#      - "5555:5555"
+#    volumes:
+#      - .:/code/
+#    env_file:
+#      - ./environment/dev/django.env
+#    #command: celery worker -A kww_project -B -E -l info -Q backup,celery --autoscale=4,1
+#    command: celery -A knowhowware flower
 
 
 volumes:

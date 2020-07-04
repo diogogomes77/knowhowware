@@ -57,7 +57,8 @@ THIRD_PARTY_APPS = [
     'rest_framework',
     'django_celery_beat',
     'ckeditor',
-    'ckeditor_uploader'
+    'ckeditor_uploader',
+    'channels'
 ]
 
 LOCAL_APPS = [
@@ -312,3 +313,5 @@ BATON = {
     }
 }
 
+# Channels
+ASGI_APPLICATION = 'knowhowware.routing.application'

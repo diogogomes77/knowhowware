@@ -27,3 +27,4 @@ django-celery-beat
 django-ckeditor
 django-3-jet
 django-baton
+channels
