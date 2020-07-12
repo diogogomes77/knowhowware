@@ -1,3 +1,4 @@
+
 CREATE DATABASE django;
 CREATE USER postgres WITH PASSWORD 'admin';
 GRANT ALL PRIVILEGES ON DATABASE django TO postgres;
