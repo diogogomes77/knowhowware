@@ -12,6 +12,7 @@ from taggit_autosuggest.managers import TaggableManager
 
 class ProjectType(models.Model):
     name = models.CharField(max_length=32, blank=False)
+    description = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
