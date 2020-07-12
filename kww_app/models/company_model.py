@@ -27,7 +27,7 @@ class Company(models.Model):
         through='ProjectParticipation',
         through_fields=['company', 'participant']
     )
-    country = models.CharField(max_length=32,blank=True)
+    country = models.ForeignKey("Country", on_delete=models.SET_NULL, blank=True, null=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -50,3 +50,10 @@ class ProjectCompany(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+
+class Country(models.Model):
+    country = models.CharField(max_length=32)
+
+    def __str__(self):
+        return self.country

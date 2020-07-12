@@ -78,6 +78,8 @@ class Project(models.Model):
     image_tag.short_description = 'Image'
 
     def __str__(self):
+        if self.parent:
+            return str(self.parent) + " - " + self.name
         return self.name
 
     def download(self):

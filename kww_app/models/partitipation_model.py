@@ -40,7 +40,7 @@ class ProjectParticipation(models.Model):
         return str(self.id)
 
     def get_absolute_url(self):
-        return reverse('participation-detail', args=[str(self.slug)])
+        return reverse('project-participation-detail', args=[str(self.slug)])
 
     def add_technology(self, tech):
         from kww_app.models import Technology
