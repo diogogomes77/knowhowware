@@ -63,6 +63,10 @@ class Project(models.Model):
 
     content = RichTextField(config_name='example', null=True, blank=True)
 
+    link = models.URLField(
+        blank=True,
+    )
+
     def _save(self, *args, **kwargs):
         #self.slug = slugify(self.name, allow_unicode=True)
         return super(Project, self).save(*args, **kwargs)
