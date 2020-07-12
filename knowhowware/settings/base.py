@@ -60,6 +60,7 @@ THIRD_PARTY_APPS = [
     'ckeditor_uploader',
     'channels',
     'drf_yasg',
+    'debug_toolbar',
 ]
 
 LOCAL_APPS = [
@@ -179,3 +180,4 @@ from .base_channels import *
 from .base_ckeditor import *
 from .base_drf import *
 from .base_minio import *
+
