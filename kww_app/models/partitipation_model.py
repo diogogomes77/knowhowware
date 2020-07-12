@@ -6,6 +6,9 @@ from django.urls import reverse
 
 
 class ProjectParticipation(models.Model):
+    class Meta:
+        verbose_name_plural = "participations"
+
     project = models.ForeignKey(
         'Project',
         on_delete=models.CASCADE)

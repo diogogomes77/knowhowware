@@ -9,6 +9,9 @@ class CompanyType(models.Model):
 
 
 class Company(models.Model):
+    class Meta:
+        verbose_name_plural = "companies"
+
     name = models.CharField(max_length=64, blank=False)
     companytype = models.ForeignKey(
         'CompanyType',
@@ -53,6 +56,9 @@ class ProjectCompany(models.Model):
 
 
 class Country(models.Model):
+    class Meta:
+        verbose_name_plural = "countries"
+
     country = models.CharField(max_length=32)
 
     def __str__(self):

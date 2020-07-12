@@ -6,6 +6,9 @@ from taggit_autosuggest.managers import TaggableManager
 
 
 class Technology(models.Model):
+    class Meta:
+        verbose_name_plural = "technologies"
+
     name = models.CharField(max_length=64)
     parents = models.ManyToManyField(
         'self', blank=True,

@@ -17,4 +17,5 @@ class TechnologyAdmin(admin.ModelAdmin):
     inlines = [ParentTechologyInline, TechnologyUseInline,]
 
 
+
 admin.site.register(Technology, TechnologyAdmin)
