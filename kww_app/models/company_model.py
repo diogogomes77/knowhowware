@@ -27,6 +27,7 @@ class Company(models.Model):
         through='ProjectParticipation',
         through_fields=['company', 'participant']
     )
+    country = models.CharField(max_length=32,blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
