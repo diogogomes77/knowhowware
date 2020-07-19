@@ -5,7 +5,7 @@ from kww_app.admin.participation_admin import ProjectParticipationInline
 from kww_app.models import Project, ProjectType, ProjectCompany, Link
 
 
-class SecondConfigInline(GenericTabularInline):
+class LinksInline(GenericTabularInline):
     model = Link
     ct_fk_field = "object_id"
     ct_field = "content_type"
@@ -18,7 +18,7 @@ class ProjectCompanyInline(admin.TabularInline):
 
 
 class ProjectAdmin(admin.ModelAdmin):
-    inlines = [ProjectParticipationInline, ProjectCompanyInline, SecondConfigInline]
+    inlines = [ProjectParticipationInline, ProjectCompanyInline, LinksInline]
     #fields = ['image_tag']
     readonly_fields = ['image_tag']
 

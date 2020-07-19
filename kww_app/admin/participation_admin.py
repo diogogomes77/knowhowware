@@ -1,5 +1,14 @@
 from django.contrib import admin
-from kww_app.models import ProjectParticipation, ProjectParticipationIssue, TechnologyUse, TechnologieIssue
+from django.contrib.contenttypes.admin import GenericTabularInline
+
+from kww_app.models import ProjectParticipation, ProjectParticipationIssue, TechnologyUse, TechnologieIssue, Link
+
+
+class LinksInline(GenericTabularInline):
+    model = Link
+    ct_fk_field = "object_id"
+    ct_field = "content_type"
+    extra = 1
 
 
 class ProjectParticipationInline(admin.TabularInline):
@@ -18,7 +27,7 @@ class TechnologyUseInline(admin.TabularInline):
 
 
 class ProjectParticipationAdmin(admin.ModelAdmin):
-    inlines = [ProjectParticipationIssueInline, TechnologyUseInline]
+    inlines = [ProjectParticipationIssueInline, TechnologyUseInline, LinksInline]
 
 
 admin.site.register(ProjectParticipation, ProjectParticipationAdmin)

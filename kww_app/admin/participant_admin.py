@@ -1,8 +1,17 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin, GroupAdmin
+from django.contrib.contenttypes.admin import GenericTabularInline
+
 from kww_app.admin.participation_admin import ProjectParticipationInline
 from kww_app.admin.technology_admin import TechnologyUseInline
-from kww_app.models import Participant, Role, HasJob
+from kww_app.models import Participant, Role, HasJob, Link
+
+
+class LinksInline(GenericTabularInline):
+    model = Link
+    ct_fk_field = "object_id"
+    ct_field = "content_type"
+    extra = 1
 
 
 class HasJobInline(admin.TabularInline):
@@ -11,7 +20,7 @@ class HasJobInline(admin.TabularInline):
 
 
 class ParticipantAdmin(UserAdmin):
-    inlines = [ProjectParticipationInline, HasJobInline]#TechnologyUseInline, ]
+    inlines = [ProjectParticipationInline, HasJobInline, LinksInline]#TechnologyUseInline, ]
 
     list_display = (
         'username',
