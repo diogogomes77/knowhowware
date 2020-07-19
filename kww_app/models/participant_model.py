@@ -1,10 +1,13 @@
 from urllib.parse import urlparse
 
 from django.contrib.auth.models import User
+from django.contrib.contenttypes.fields import GenericRelation
 from django.db import models
 from django.http import HttpResponse
 from django.urls import reverse
 from minio_storage.storage import MinioMediaStorage
+
+from kww_app.models import Link
 
 storage = MinioMediaStorage()
 
@@ -33,6 +36,8 @@ class Participant(User):
         blank=True,
         storage=storage
     )
+
+    links = GenericRelation(Link)
 
     @property
     def slug(self):

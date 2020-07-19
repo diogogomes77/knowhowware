@@ -32,6 +32,6 @@ add to the through model an explanation about how the tech was used in the proje
 - [x] User Participant registration admin form
 - [x] REST Swagger
 - [ ] STOMP + JWT + Channels
-- [ ] Multiple links (using generic many-to-many rels)
+- [x] Multiple links (using generic many-to-many rels)
 - [ ] ElasticSearch
 - [ ] Google Cloud

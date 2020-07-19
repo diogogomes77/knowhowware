@@ -1,8 +1,11 @@
 from ckeditor.fields import RichTextField
+from django.contrib.contenttypes.fields import GenericRelation
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.urls import reverse
+
+from kww_app.models import Link
 
 
 class ProjectParticipation(models.Model):
@@ -31,6 +34,8 @@ class ProjectParticipation(models.Model):
         through='TechnologyUse',
         through_fields=['projectparticipation', 'technology']
     )
+
+    links = GenericRelation(Link)
 
     start = models.DateField(null=True, blank=True)
     end = models.DateField(null=True, blank=True)
@@ -88,6 +93,7 @@ class ProjectParticipationIssue(models.Model):
         related_name="issues",
         on_delete=models.CASCADE
     )
+    links = GenericRelation(Link)
     # technologies = models.ManyToManyField(
     #     'Technology',
     #     through='TechnologieIssue',
@@ -105,6 +111,7 @@ class TechnologieIssue(models.Model):
         on_delete=models.SET_NULL,
         null=True
     )
+    links = GenericRelation(Link)
     description = RichTextField(config_name='awesome_ckeditor', null=True, blank=True)
 
 

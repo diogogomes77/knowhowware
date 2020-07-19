@@ -1,6 +1,15 @@
 from django.contrib import admin
+from django.contrib.contenttypes.admin import GenericTabularInline
+
 from kww_app.admin.participation_admin import ProjectParticipationInline
-from kww_app.models import Project, ProjectType, ProjectCompany
+from kww_app.models import Project, ProjectType, ProjectCompany, Link
+
+
+class SecondConfigInline(GenericTabularInline):
+    model = Link
+    ct_fk_field = "object_id"
+    ct_field = "content_type"
+    extra = 1
 
 
 class ProjectCompanyInline(admin.TabularInline):
@@ -9,7 +18,7 @@ class ProjectCompanyInline(admin.TabularInline):
 
 
 class ProjectAdmin(admin.ModelAdmin):
-    inlines = [ProjectParticipationInline, ProjectCompanyInline, ]
+    inlines = [ProjectParticipationInline, ProjectCompanyInline, SecondConfigInline]
     #fields = ['image_tag']
     readonly_fields = ['image_tag']
 

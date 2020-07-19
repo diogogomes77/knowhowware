@@ -1,4 +1,7 @@
+from django.contrib.contenttypes.fields import GenericRelation
 from django.db import models
+
+from kww_app.models import Link
 
 
 class CompanyType(models.Model):
@@ -31,7 +34,7 @@ class Company(models.Model):
         through_fields=['company', 'participant']
     )
     country = models.ForeignKey("Country", on_delete=models.SET_NULL, blank=True, null=True)
-
+    links = GenericRelation(Link)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

@@ -4,6 +4,8 @@ from django.contrib.contenttypes.fields import GenericRelation
 from django.db import models
 from taggit_autosuggest.managers import TaggableManager
 
+from kww_app.models import Link
+
 
 class Technology(models.Model):
     class Meta:
@@ -21,6 +23,8 @@ class Technology(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     tags = TaggableManager(blank=True)
+
+    links = GenericRelation(Link)
 
     def __str__(self):
         return self.name
@@ -47,5 +51,7 @@ class TechnologyUse(models.Model):
         null=True
     )
     description = RichTextField(config_name='awesome_ckeditor', null=True, blank=True)
+    links = GenericRelation(Link)
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

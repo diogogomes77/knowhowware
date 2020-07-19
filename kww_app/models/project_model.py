@@ -9,6 +9,8 @@ from django.conf import settings
 from django.utils.text import slugify
 from taggit_autosuggest.managers import TaggableManager
 
+from kww_app.models.links_model import Link
+
 
 class ProjectType(models.Model):
     name = models.CharField(max_length=32, blank=False)
@@ -64,9 +66,7 @@ class Project(models.Model):
 
     content = RichTextField(config_name='example', null=True, blank=True)
 
-    link = models.URLField(
-        blank=True,
-    )
+    links = GenericRelation(Link)
 
     def _save(self, *args, **kwargs):
         #self.slug = slugify(self.name, allow_unicode=True)
