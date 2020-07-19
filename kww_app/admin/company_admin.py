@@ -23,6 +23,7 @@ class ProjectCompanyInline(admin.TabularInline):
 
 class CompanyAdmin(admin.ModelAdmin):
     inlines = [ProjectCompanyInline, LinksInline]#TechnologyUseInline, ]
+    list_display = ('name', 'companytype', 'country')
 
 
 admin.site.register(Company, CompanyAdmin)
