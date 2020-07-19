@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models.project_model import Project
+from kww_app.models.project_model import Project
 
 
 class ProjectSerializer(serializers.ModelSerializer):

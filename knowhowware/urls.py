@@ -7,7 +7,9 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from frontend.views import index
 from kww_app import views
-from kww_app.api import ProjectViewSet
+from kww_app.api.company_api import CompanyViewSet
+from kww_app.api.project_api import ProjectViewSet
+from kww_app.api.technology_api import TechnologyViewSet
 from kww_app.views import download
 from rest_framework import routers
 
@@ -20,6 +22,8 @@ from kww_celery.views import celery_view, CreateView, DetailView, IndexView
 
 router = routers.DefaultRouter()
 router.register('api/projects', ProjectViewSet, 'projects')
+router.register('api/companies', CompanyViewSet, 'companies')
+router.register('api/technologies', TechnologyViewSet, 'technologies')
 
 
 urlpatterns = [

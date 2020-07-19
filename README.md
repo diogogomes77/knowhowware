@@ -36,3 +36,4 @@ add to the through model an explanation about how the tech was used in the proje
 - [ ] ElasticSearch
 - [ ] Google Cloud
 - [ ] Calculate inserted data percentage completion
+- [ ] UML model class diagram

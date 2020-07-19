@@ -1,8 +1,8 @@
 from rest_framework.decorators import action
 
-from .models import Project
+from kww_app.api_serializers.project_serial import ProjectSerializer
+from kww_app.models import Project
 from rest_framework import viewsets, permissions
-from .serializers import ProjectSerializer
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
