@@ -24,6 +24,7 @@ router.register('api/projects', ProjectViewSet, 'projects')
 
 urlpatterns = [
     #path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
+    path('api/', include((router.urls, 'api'), namespace='api')),
     path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
     path('baton/', include('baton.urls')),
