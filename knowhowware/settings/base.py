@@ -17,6 +17,8 @@ import os
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 from celery.schedules import crontab
 
+from knowhowware.utils import asbool
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Quick-start development settings - unsuitable for production
@@ -26,8 +28,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = os.environ.get('SECRET_KEY', '$^go^d01523heiop_ipil%mv-!j^a71y%za22=(u$d9&u(8#v5')
 
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', False)
+#DEBUG = os.environ.get('DEBUG', False)
+DEBUG = asbool(os.environ.get("DEBUG"))  # Don't turn on in production!
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', [])
 

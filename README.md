@@ -34,3 +34,4 @@ add to the through model an explanation about how the tech was used in the proje
 - [ ] STOMP + JWT + Channels
 - [ ] Multiple links (using generic many-to-many rels)
 - [ ] ElasticSearch
+- [ ] Google Cloud
