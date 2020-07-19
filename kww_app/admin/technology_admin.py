@@ -1,5 +1,14 @@
 from django.contrib import admin
-from kww_app.models import Technology, TechnologyUse, ParentTechnology
+from django.contrib.contenttypes.admin import GenericTabularInline
+
+from kww_app.models import Technology, TechnologyUse, ParentTechnology, Link
+
+
+class LinksInline(GenericTabularInline):
+    model = Link
+    ct_fk_field = "object_id"
+    ct_field = "content_type"
+    extra = 1
 
 
 class TechnologyUseInline(admin.TabularInline):
@@ -14,7 +23,7 @@ class ParentTechologyInline(admin.TabularInline):
 
 
 class TechnologyAdmin(admin.ModelAdmin):
-    inlines = [ParentTechologyInline, TechnologyUseInline,]
+    inlines = [ParentTechologyInline, TechnologyUseInline, LinksInline]
 
 
 

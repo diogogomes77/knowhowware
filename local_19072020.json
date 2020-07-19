@@ -1,0 +1,2046 @@
+[
+{
+    "model": "kww_app.link",
+    "pk": 1,
+    "fields": {
+        "url": "https://www.ict-flame.eu/",
+        "description": "Project website",
+        "link_type": null,
+        "content_type": [
+            "kww_app",
+            "project"
+        ],
+        "object_id": 3
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 2,
+    "fields": {
+        "url": "https://www.5gcity.eu/wp-content/uploads/2018/04/Trento-IEEE-2018.pdf",
+        "description": null,
+        "link_type": null,
+        "content_type": [
+            "kww_app",
+            "project"
+        ],
+        "object_id": 6
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 3,
+    "fields": {
+        "url": "https://www.5gcity.eu/",
+        "description": "Project website",
+        "link_type": null,
+        "content_type": [
+            "kww_app",
+            "project"
+        ],
+        "object_id": 5
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 4,
+    "fields": {
+        "url": "https://www.ict-flame.eu/blog-post/edgetube-a-groundbreaking-solution-for-crowded-events-streaming/",
+        "description": "Project blog post",
+        "link_type": null,
+        "content_type": [
+            "kww_app",
+            "project"
+        ],
+        "object_id": 4
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 5,
+    "fields": {
+        "url": "https://api.smartlamppost.com/admin/",
+        "description": "Backend production",
+        "link_type": null,
+        "content_type": [
+            "kww_app",
+            "project"
+        ],
+        "object_id": 2
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 6,
+    "fields": {
+        "url": "https://smartlamppost.com/",
+        "description": "Project website",
+        "link_type": null,
+        "content_type": [
+            "kww_app",
+            "project"
+        ],
+        "object_id": 1
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 7,
+    "fields": {
+        "url": "https://www.dognaedis.com/",
+        "description": "Company landing page",
+        "link_type": 1,
+        "content_type": [
+            "kww_app",
+            "company"
+        ],
+        "object_id": 14
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 8,
+    "fields": {
+        "url": "https://balcaodigital.aguasdoporto.pt/",
+        "description": null,
+        "link_type": 2,
+        "content_type": [
+            "kww_app",
+            "project"
+        ],
+        "object_id": 8
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 9,
+    "fields": {
+        "url": "https://www.cm-porto.pt/",
+        "description": null,
+        "link_type": 3,
+        "content_type": [
+            "kww_app",
+            "company"
+        ],
+        "object_id": 15
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 10,
+    "fields": {
+        "url": "https://balcaodigital.aguasdoporto.pt/",
+        "description": null,
+        "link_type": null,
+        "content_type": [
+            "kww_app",
+            "project"
+        ],
+        "object_id": 9
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 11,
+    "fields": {
+        "url": "https://www.ubiwhere.com/",
+        "description": null,
+        "link_type": 3,
+        "content_type": [
+            "kww_app",
+            "company"
+        ],
+        "object_id": 1
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 12,
+    "fields": {
+        "url": "http://www.proefgroup.com/pt/",
+        "description": null,
+        "link_type": 3,
+        "content_type": [
+            "kww_app",
+            "company"
+        ],
+        "object_id": 2
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 13,
+    "fields": {
+        "url": "https://i2cat.net/",
+        "description": null,
+        "link_type": 3,
+        "content_type": [
+            "kww_app",
+            "company"
+        ],
+        "object_id": 6
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 14,
+    "fields": {
+        "url": "https://docs.djangoproject.com/en/3.0/ref/contrib/admin/",
+        "description": null,
+        "link_type": 4,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 27
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 15,
+    "fields": {
+        "url": "https://www.ccs-labs.org/software/openc2x/",
+        "description": null,
+        "link_type": 3,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 25
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 16,
+    "fields": {
+        "url": "https://github.com/florianklingler/OpenC2X-standalone",
+        "description": null,
+        "link_type": 5,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 25
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 17,
+    "fields": {
+        "url": "https://www.investopedia.com/terms/v/v2x-vehicletovehicle-or-vehicletoinfrastructure.asp",
+        "description": null,
+        "link_type": 6,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 28
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 18,
+    "fields": {
+        "url": "https://www.djangoproject.com/start/overview/",
+        "description": null,
+        "link_type": 1,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 2
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 19,
+    "fields": {
+        "url": "https://www.python.org/",
+        "description": null,
+        "link_type": 3,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 1
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 20,
+    "fields": {
+        "url": "https://www.python.org/doc/",
+        "description": null,
+        "link_type": 4,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 1
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 21,
+    "fields": {
+        "url": "https://zeromq.org/",
+        "description": null,
+        "link_type": 3,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 29
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 22,
+    "fields": {
+        "url": "http://wiki.zeromq.org/",
+        "description": null,
+        "link_type": 6,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 29
+    }
+},
+{
+    "model": "kww_app.link",
+    "pk": 23,
+    "fields": {
+        "url": "https://developers.google.com/protocol-buffers",
+        "description": null,
+        "link_type": 4,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 30
+    }
+},
+{
+    "model": "kww_app.linktype",
+    "pk": 1,
+    "fields": {
+        "link_type": "Landing page"
+    }
+},
+{
+    "model": "kww_app.linktype",
+    "pk": 2,
+    "fields": {
+        "link_type": "Platform"
+    }
+},
+{
+    "model": "kww_app.linktype",
+    "pk": 3,
+    "fields": {
+        "link_type": "Website"
+    }
+},
+{
+    "model": "kww_app.linktype",
+    "pk": 4,
+    "fields": {
+        "link_type": "Documentation"
+    }
+},
+{
+    "model": "kww_app.linktype",
+    "pk": 5,
+    "fields": {
+        "link_type": "Repository"
+    }
+},
+{
+    "model": "kww_app.linktype",
+    "pk": 6,
+    "fields": {
+        "link_type": "Wiki"
+    }
+},
+{
+    "model": "kww_app.projecttype",
+    "pk": 1,
+    "fields": {
+        "name": "Software Product",
+        "description": "A Software Product is generally composed of some smaller projects, decoupled with individual management and developement."
+    }
+},
+{
+    "model": "kww_app.projecttype",
+    "pk": 2,
+    "fields": {
+        "name": "Backend",
+        "description": "Backend projects are part of bigger projects where they're responsible for data management, data logic and data interface integration with other projects, of types such as Frontend or Mobile."
+    }
+},
+{
+    "model": "kww_app.projecttype",
+    "pk": 3,
+    "fields": {
+        "name": "R&I",
+        "description": "Research and Investigation projects are projects generally co-financed by government institutions."
+    }
+},
+{
+    "model": "kww_app.project",
+    "pk": 1,
+    "fields": {
+        "name": "SmartLampPost marketplace",
+        "projecttype": 1,
+        "start": null,
+        "end": null,
+        "parent": null,
+        "created_at": "2020-07-04T14:28:30.159Z",
+        "updated_at": "2020-07-19T11:54:36.935Z",
+        "image": "",
+        "file": "",
+        "content": "<div class=\"ddiUTi solution__TextOne-sc-1j8z64l-5\">\r\n<p>Smartlamppost is a modular concept of urban furniture allowing Municipalities, Tower and Infrastructures companies to future-proof their offer with a wide range of flexible and high-end housing solutions. That will allow to accommodate all the needs of a Smart City.</p>\r\n\r\n<h1>MARKETPLACE PLATFORM .</h1>\r\n\r\n<div class=\"btSlmN features__FeaturesTitle-sc-1wk6pev-3\">\r\n<h4>A unified marketplace for digital infrastructure<br />\r\nand multi-purpose sites.</h4>\r\n</div>\r\n\r\n<div class=\"QYktb features__FeaturesText-sc-1wk6pev-4\">\r\n<p>Smartlamppost solutions are complemented with a management platform that allows tenants and owners/landlords to perform lease and asset management tasks.<br />\r\nIt also offers a marketplace where Smartlamppost solutions owners can promote their resources in order to engage with new tenants.</p>\r\n</div>\r\n</div>"
+    }
+},
+{
+    "model": "kww_app.project",
+    "pk": 2,
+    "fields": {
+        "name": "SLP backend",
+        "projecttype": 2,
+        "start": null,
+        "end": null,
+        "parent": 1,
+        "created_at": "2020-07-04T14:29:42.177Z",
+        "updated_at": "2020-07-19T11:54:14.500Z",
+        "image": "",
+        "file": "",
+        "content": ""
+    }
+},
+{
+    "model": "kww_app.project",
+    "pk": 3,
+    "fields": {
+        "name": "FLAME",
+        "projecttype": 3,
+        "start": "2017-01-01",
+        "end": null,
+        "parent": null,
+        "created_at": "2020-07-12T18:57:47.863Z",
+        "updated_at": "2020-07-19T11:50:14.134Z",
+        "image": "",
+        "file": "",
+        "content": "<p><strong>FLAME</strong> outlines the main platform benefits as part of the initial work needed to develop and<br />\r\ndeploy a Future Media Internet delivery platform starting in 2018. The main target is to provide a significant leap forward for media delivery supporting personalized, interactive, mobile and localized (PIML) workflows.</p>\r\n\r\n<p>The FLAME platform provides this leap through capabilities for low latency distributed computing as well as content over a 5G-enabled programmable infrastructure, providing the user with faster access to media and services, lower latency and higher personalization of the experience through closer media processing. Through the platform&rsquo;s fast and dynamic service request routing capability, media service providers will have fine-grained control over load and therefore costs across the network. This offers the potential to significantly reduce the overall costs while ensuring fast availability of services towards end users.</p>\r\n\r\n<p>Furthermore, the FLAME platform will provide the capability to cheaply broadcast content to multiple users without any need for adopting clients and services to specific multicast protocols, significantly reducing the predicted cost increase for video delivery.</p>"
+    }
+},
+{
+    "model": "kww_app.project",
+    "pk": 4,
+    "fields": {
+        "name": "EdgeTube",
+        "projecttype": 3,
+        "start": "2018-11-01",
+        "end": "2019-05-30",
+        "parent": 3,
+        "created_at": "2020-07-12T19:00:30.606Z",
+        "updated_at": "2020-07-19T11:53:16.850Z",
+        "image": "",
+        "file": "",
+        "content": "<p>EdgeTube, from Ubiwhere, is an H2020 FLAME 1st Open Call winner hoping to create a new business case for<strong> efficient and low-cost crowdsourced media acquisition and distribution, using key technology such as Edge Computing</strong>. The designed experiment is targeting both Mobile Network Operators, Service Providers and even Event Organizers. With this solution, and in the scope of the company&rsquo;s Smart Lamppost solution (http://smartlamppost.com), such actors can not only use this smart urban furniture to extend the network coverage and capacity to serve the the event&rsquo;s attendees (with built-in Small Cells), but also to provide value-added solutions, by deploying and re-using Edge Computing hardware to pre-process and pre-filter media-related content. Being able to do so allows such actors to (i) save costs on bandwidth (by avoiding unnecessary traffic in the backhaul) and computational processing power and (ii) to allow for a better QoE experiment for cloud-connected consumers of such media streams. <strong>In essence, and focusing on the end-user, the solution allows for viewers to watch different segments of the event (live coverage of specific areas or events), providing that the system incentivizes local attendees to live stream different content with the best possible quality.</strong> Due to the system&rsquo;s intelligence, the solution hopes to provide viewers with a global coverage of the event, while ensuring the best possible quality for each segment, with very little interruptions due to the built-in automatic failover mechanism (pool of backup streams).</p>"
+    }
+},
+{
+    "model": "kww_app.project",
+    "pk": 5,
+    "fields": {
+        "name": "5GCity",
+        "projecttype": 3,
+        "start": null,
+        "end": null,
+        "parent": null,
+        "created_at": "2020-07-12T20:35:24.461Z",
+        "updated_at": "2020-07-19T11:52:29.959Z",
+        "image": "",
+        "file": "",
+        "content": "<h3>5GCity will design, develop, deploy and demonstrate, in operational conditions, a distributed cloud and radio platform for municipalities and infrastructure owners acting as 5G neutral hosts.</h3>"
+    }
+},
+{
+    "model": "kww_app.project",
+    "pk": 6,
+    "fields": {
+        "name": "UC6",
+        "projecttype": 3,
+        "start": null,
+        "end": null,
+        "parent": 5,
+        "created_at": "2020-07-12T20:42:34.994Z",
+        "updated_at": "2020-07-19T11:52:11.463Z",
+        "image": "",
+        "file": "",
+        "content": "<p><span style=\"font-family:sans-serif; font-size:21.9163px\">Cooperative, Connected and Automated Mobility</span></p>"
+    }
+},
+{
+    "model": "kww_app.project",
+    "pk": 7,
+    "fields": {
+        "name": "Cat|Mobile",
+        "projecttype": 1,
+        "start": null,
+        "end": null,
+        "parent": null,
+        "created_at": "2020-07-12T20:47:00.897Z",
+        "updated_at": "2020-07-12T20:47:00.897Z",
+        "image": "",
+        "file": "",
+        "content": ""
+    }
+},
+{
+    "model": "kww_app.project",
+    "pk": 8,
+    "fields": {
+        "name": "\u00c1guas do Porto - Balc\u00e3o Digital",
+        "projecttype": 1,
+        "start": null,
+        "end": null,
+        "parent": null,
+        "created_at": "2020-07-19T12:27:46.643Z",
+        "updated_at": "2020-07-19T12:27:46.643Z",
+        "image": "",
+        "file": "",
+        "content": "<div>O que &eacute; o Balc&atilde;o Digital</div>\r\n\r\n<div>\r\n<p>Criado a pensar nos clientes, para maior comodidade e rapidez no acesso aos servi&ccedil;os prestados, a qualquer hora e em qualquer lugar, a &Aacute;guas do Porto apresenta o Balc&atilde;o Digital.</p>\r\n\r\n<p>Com este servi&ccedil;o inovador, os nossos clientes podem ter acesso a diversas funcionalidades &agrave; dist&acirc;ncia de um clique:</p>\r\n\r\n<p>&raquo; Consultar e alterar os contratos;</p>\r\n\r\n<p>&raquo; Acompanhar os consumos;</p>\r\n\r\n<p>&raquo; Consultar as faturas;</p>\r\n\r\n<p>&raquo; Comunicar as leituras;</p>\r\n\r\n<p>&raquo; Aderir &agrave; factura&ccedil;&atilde;o eletr&oacute;nica e ao d&eacute;bito direto;</p>\r\n\r\n<p>&raquo; Solicitar a presta&ccedil;&atilde;o de servi&ccedil;os.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n</div>"
+    }
+},
+{
+    "model": "kww_app.project",
+    "pk": 9,
+    "fields": {
+        "name": "AdP Backend and backoffice",
+        "projecttype": 2,
+        "start": null,
+        "end": null,
+        "parent": 8,
+        "created_at": "2020-07-19T12:31:56.087Z",
+        "updated_at": "2020-07-19T12:36:31.921Z",
+        "image": "",
+        "file": "",
+        "content": ""
+    }
+},
+{
+    "model": "kww_app.role",
+    "pk": 1,
+    "fields": {
+        "name": "Backend Developer"
+    }
+},
+{
+    "model": "kww_app.role",
+    "pk": 2,
+    "fields": {
+        "name": "R&I Developer"
+    }
+},
+{
+    "model": "kww_app.role",
+    "pk": 3,
+    "fields": {
+        "name": "Mobile developer"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 1,
+    "fields": {
+        "name": "Python",
+        "content": "<p>Python is a programming language that lets you work quickly and integrate systems more effectively.</p>",
+        "created_at": "2020-07-04T14:23:01.706Z",
+        "updated_at": "2020-07-19T13:09:57.406Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 2,
+    "fields": {
+        "name": "Django",
+        "content": "<p><em>Django makes it easier to build better Web apps more quickly and with less code.</em></p>\r\n\r\n<p><em>Django</em> was invented to meet fast-moving <em>newsroom deadlines</em>, while satisfying the tough requirements of <em>experienced Web developers</em>.</p>",
+        "created_at": "2020-07-04T14:23:11.749Z",
+        "updated_at": "2020-07-19T13:08:44.160Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 3,
+    "fields": {
+        "name": "WebSocket",
+        "content": null,
+        "created_at": "2020-07-04T14:23:35.007Z",
+        "updated_at": "2020-07-04T14:23:35.007Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 4,
+    "fields": {
+        "name": "Channels",
+        "content": null,
+        "created_at": "2020-07-04T14:24:10.665Z",
+        "updated_at": "2020-07-04T14:25:26.350Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 5,
+    "fields": {
+        "name": "Celery",
+        "content": null,
+        "created_at": "2020-07-04T14:31:44.945Z",
+        "updated_at": "2020-07-04T14:31:44.945Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 6,
+    "fields": {
+        "name": "Min.io",
+        "content": null,
+        "created_at": "2020-07-04T14:32:11.222Z",
+        "updated_at": "2020-07-04T14:32:11.222Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 7,
+    "fields": {
+        "name": "VerneMQ",
+        "content": null,
+        "created_at": "2020-07-04T14:32:37.327Z",
+        "updated_at": "2020-07-04T14:32:37.327Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 8,
+    "fields": {
+        "name": "Rest",
+        "content": null,
+        "created_at": "2020-07-04T14:33:55.541Z",
+        "updated_at": "2020-07-04T14:33:55.541Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 9,
+    "fields": {
+        "name": "Django Rest Framework",
+        "content": null,
+        "created_at": "2020-07-04T14:34:04.219Z",
+        "updated_at": "2020-07-04T14:34:21.708Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 10,
+    "fields": {
+        "name": "Docker",
+        "content": null,
+        "created_at": "2020-07-05T10:43:46.041Z",
+        "updated_at": "2020-07-05T10:43:46.041Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 11,
+    "fields": {
+        "name": "docker-compose",
+        "content": null,
+        "created_at": "2020-07-05T10:43:52.205Z",
+        "updated_at": "2020-07-05T10:43:52.205Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 12,
+    "fields": {
+        "name": "nginx",
+        "content": null,
+        "created_at": "2020-07-12T20:28:17.358Z",
+        "updated_at": "2020-07-12T20:30:14.837Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 13,
+    "fields": {
+        "name": "RTMP",
+        "content": null,
+        "created_at": "2020-07-12T20:29:28.020Z",
+        "updated_at": "2020-07-12T20:29:28.020Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 14,
+    "fields": {
+        "name": "nginx-rtmp",
+        "content": null,
+        "created_at": "2020-07-12T20:30:36.233Z",
+        "updated_at": "2020-07-12T20:30:36.233Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 15,
+    "fields": {
+        "name": "Flask",
+        "content": null,
+        "created_at": "2020-07-12T20:31:22.980Z",
+        "updated_at": "2020-07-12T20:31:22.980Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 16,
+    "fields": {
+        "name": "Java",
+        "content": null,
+        "created_at": "2020-07-12T20:32:13.869Z",
+        "updated_at": "2020-07-12T20:32:13.869Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 17,
+    "fields": {
+        "name": "Android SDK",
+        "content": null,
+        "created_at": "2020-07-12T20:32:19.650Z",
+        "updated_at": "2020-07-12T20:32:19.650Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 18,
+    "fields": {
+        "name": "LXC",
+        "content": null,
+        "created_at": "2020-07-12T20:33:02.638Z",
+        "updated_at": "2020-07-12T20:33:02.638Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 19,
+    "fields": {
+        "name": "TICKS",
+        "content": null,
+        "created_at": "2020-07-12T20:33:35.067Z",
+        "updated_at": "2020-07-12T20:33:35.067Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 20,
+    "fields": {
+        "name": "VirtualBox",
+        "content": null,
+        "created_at": "2020-07-12T20:34:08.105Z",
+        "updated_at": "2020-07-12T20:34:08.105Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 21,
+    "fields": {
+        "name": "Data Distribution System",
+        "content": null,
+        "created_at": "2020-07-14T07:24:01.406Z",
+        "updated_at": "2020-07-14T07:24:01.406Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 22,
+    "fields": {
+        "name": "Cyclone DDS",
+        "content": null,
+        "created_at": "2020-07-14T07:24:06.162Z",
+        "updated_at": "2020-07-14T07:24:06.162Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 23,
+    "fields": {
+        "name": "Fog",
+        "content": null,
+        "created_at": "2020-07-14T07:25:01.361Z",
+        "updated_at": "2020-07-14T07:25:01.361Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 24,
+    "fields": {
+        "name": "Fog05",
+        "content": null,
+        "created_at": "2020-07-14T07:25:04.819Z",
+        "updated_at": "2020-07-14T07:25:04.819Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 25,
+    "fields": {
+        "name": "OpenC2X",
+        "content": "<p>OpenC2X is one of the first complete Open Source experimental and prototyping platform for vehicular networking solutions. Our system supports most of the ETSI ITS-G5 features and runs on standard Linux.</p>",
+        "created_at": "2020-07-14T07:25:38.242Z",
+        "updated_at": "2020-07-19T13:07:15.590Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 26,
+    "fields": {
+        "name": "Django 1.x",
+        "content": null,
+        "created_at": "2020-07-19T12:53:40.455Z",
+        "updated_at": "2020-07-19T12:53:40.455Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 27,
+    "fields": {
+        "name": "Django admin",
+        "content": null,
+        "created_at": "2020-07-19T12:56:55.176Z",
+        "updated_at": "2020-07-19T12:56:55.176Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 28,
+    "fields": {
+        "name": "V2X",
+        "content": "<p>Vehicle-to-everything (V2X) is a technology that allows vehicles to communicate with moving parts of the traffic system around them. Also known as connected-vehicle-to-everything communication, it has several components.</p>\r\n\r\n<p>One component of this technology is called vehicle-to-vehicle (V2V) which allows vehicles to communicate with one another. Another component is vehicle to infrastructure (V2I) which allows vehicles to communicate with external systems such as street lights, buildings, and even cyclists or pedestrians. As this technology becomes more sophisticated in the future, what it is capable of will expand.</p>",
+        "created_at": "2020-07-19T13:07:01.495Z",
+        "updated_at": "2020-07-19T13:07:01.495Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 29,
+    "fields": {
+        "name": "ZMQ",
+        "content": "<p>ZeroMQ (also known as &Oslash;MQ, 0MQ, or zmq) looks like an embeddable networking library but acts like a concurrency framework. It gives you sockets that carry atomic messages across various transports like in-process, inter-process, TCP, and multicast. You can connect sockets N-to-N with patterns like fan-out, pub-sub, task distribution, and request-reply. It&#39;s fast enough to be the fabric for clustered products. Its asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing tasks. It has a score of language APIs and runs on most operating systems.</p>",
+        "created_at": "2020-07-19T13:12:23.509Z",
+        "updated_at": "2020-07-19T13:12:23.509Z"
+    }
+},
+{
+    "model": "kww_app.technology",
+    "pk": 30,
+    "fields": {
+        "name": "Protocol buffers",
+        "content": "<p>Protocol buffers are Google&#39;s language-neutral, platform-neutral, extensible mechanism for serializing structured data &ndash; think XML, but smaller, faster, and simpler. You define how you want your data to be structured once, then you can use special generated source code to easily write and read your structured data to and from a variety of data streams and using a variety of languages.</p>",
+        "created_at": "2020-07-19T13:13:15.712Z",
+        "updated_at": "2020-07-19T13:13:15.712Z"
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 1,
+    "fields": {
+        "technology": 2,
+        "parent": 4
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 2,
+    "fields": {
+        "technology": 3,
+        "parent": 4
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 3,
+    "fields": {
+        "technology": 1,
+        "parent": 2
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 4,
+    "fields": {
+        "technology": 2,
+        "parent": 5
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 5,
+    "fields": {
+        "technology": 2,
+        "parent": 9
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 6,
+    "fields": {
+        "technology": 8,
+        "parent": 9
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 7,
+    "fields": {
+        "technology": 10,
+        "parent": 11
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 8,
+    "fields": {
+        "technology": 13,
+        "parent": 14
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 9,
+    "fields": {
+        "technology": 12,
+        "parent": 14
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 10,
+    "fields": {
+        "technology": 1,
+        "parent": 15
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 11,
+    "fields": {
+        "technology": 16,
+        "parent": 17
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 12,
+    "fields": {
+        "technology": 21,
+        "parent": 22
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 13,
+    "fields": {
+        "technology": 23,
+        "parent": 24
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 14,
+    "fields": {
+        "technology": 2,
+        "parent": 26
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 15,
+    "fields": {
+        "technology": 2,
+        "parent": 27
+    }
+},
+{
+    "model": "kww_app.parenttechnology",
+    "pk": 16,
+    "fields": {
+        "technology": 28,
+        "parent": 25
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 1,
+    "fields": {
+        "technology": 2,
+        "projectparticipation": 1,
+        "description": "",
+        "created_at": "2020-07-04T14:34:24.276Z",
+        "updated_at": "2020-07-04T14:34:24.276Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 2,
+    "fields": {
+        "technology": 4,
+        "projectparticipation": 1,
+        "description": "",
+        "created_at": "2020-07-04T14:34:24.280Z",
+        "updated_at": "2020-07-04T14:34:24.280Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 3,
+    "fields": {
+        "technology": 5,
+        "projectparticipation": 1,
+        "description": "",
+        "created_at": "2020-07-04T14:34:24.281Z",
+        "updated_at": "2020-07-04T14:34:24.281Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 4,
+    "fields": {
+        "technology": 6,
+        "projectparticipation": 1,
+        "description": "",
+        "created_at": "2020-07-04T14:34:24.282Z",
+        "updated_at": "2020-07-04T14:34:24.282Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 5,
+    "fields": {
+        "technology": 7,
+        "projectparticipation": 1,
+        "description": "",
+        "created_at": "2020-07-04T14:34:24.283Z",
+        "updated_at": "2020-07-04T14:34:24.283Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 6,
+    "fields": {
+        "technology": 9,
+        "projectparticipation": 1,
+        "description": "",
+        "created_at": "2020-07-04T14:34:24.284Z",
+        "updated_at": "2020-07-04T14:34:24.284Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 7,
+    "fields": {
+        "technology": 14,
+        "projectparticipation": 2,
+        "description": "",
+        "created_at": "2020-07-12T20:34:13.691Z",
+        "updated_at": "2020-07-12T20:34:13.691Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 8,
+    "fields": {
+        "technology": 15,
+        "projectparticipation": 2,
+        "description": "",
+        "created_at": "2020-07-12T20:34:13.710Z",
+        "updated_at": "2020-07-12T20:34:13.710Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 9,
+    "fields": {
+        "technology": 17,
+        "projectparticipation": 2,
+        "description": "",
+        "created_at": "2020-07-12T20:34:13.729Z",
+        "updated_at": "2020-07-12T20:34:13.729Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 10,
+    "fields": {
+        "technology": 18,
+        "projectparticipation": 2,
+        "description": "",
+        "created_at": "2020-07-12T20:34:13.744Z",
+        "updated_at": "2020-07-12T20:34:13.744Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 11,
+    "fields": {
+        "technology": 19,
+        "projectparticipation": 2,
+        "description": "",
+        "created_at": "2020-07-12T20:34:13.761Z",
+        "updated_at": "2020-07-12T20:34:13.761Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 12,
+    "fields": {
+        "technology": 20,
+        "projectparticipation": 2,
+        "description": "",
+        "created_at": "2020-07-12T20:34:13.778Z",
+        "updated_at": "2020-07-12T20:34:13.778Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 13,
+    "fields": {
+        "technology": 22,
+        "projectparticipation": 3,
+        "description": "",
+        "created_at": "2020-07-14T07:25:45.570Z",
+        "updated_at": "2020-07-14T07:25:45.570Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 14,
+    "fields": {
+        "technology": 24,
+        "projectparticipation": 3,
+        "description": "",
+        "created_at": "2020-07-14T07:25:45.593Z",
+        "updated_at": "2020-07-14T07:25:45.593Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 15,
+    "fields": {
+        "technology": 25,
+        "projectparticipation": 3,
+        "description": "",
+        "created_at": "2020-07-14T07:25:45.612Z",
+        "updated_at": "2020-07-14T07:25:45.612Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 16,
+    "fields": {
+        "technology": 26,
+        "projectparticipation": 6,
+        "description": "",
+        "created_at": "2020-07-19T12:55:30.274Z",
+        "updated_at": "2020-07-19T12:55:30.274Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 17,
+    "fields": {
+        "technology": 27,
+        "projectparticipation": 6,
+        "description": "",
+        "created_at": "2020-07-19T12:57:14.623Z",
+        "updated_at": "2020-07-19T12:57:14.623Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 18,
+    "fields": {
+        "technology": 1,
+        "projectparticipation": 3,
+        "description": "",
+        "created_at": "2020-07-19T13:17:57.627Z",
+        "updated_at": "2020-07-19T13:17:57.627Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 19,
+    "fields": {
+        "technology": 29,
+        "projectparticipation": 3,
+        "description": "<p>ZMQ is used in OpenC2x to component&#39;s integrated comunication.</p>\r\n\r\n<p>ZMQ is also used to comunication in Vehicle-to-infrastructure Python application.</p>",
+        "created_at": "2020-07-19T13:17:57.646Z",
+        "updated_at": "2020-07-19T13:17:57.646Z"
+    }
+},
+{
+    "model": "kww_app.technologyuse",
+    "pk": 20,
+    "fields": {
+        "technology": 30,
+        "projectparticipation": 3,
+        "description": "<p>Protocol buffers are used in the messages exchanged, between OpenC2x components, through ZMQ.</p>",
+        "created_at": "2020-07-19T13:17:57.662Z",
+        "updated_at": "2020-07-19T13:17:57.662Z"
+    }
+},
+{
+    "model": "kww_app.companytype",
+    "pk": 1,
+    "fields": {
+        "name": "Education & Research"
+    }
+},
+{
+    "model": "kww_app.companytype",
+    "pk": 2,
+    "fields": {
+        "name": "Research"
+    }
+},
+{
+    "model": "kww_app.companytype",
+    "pk": 3,
+    "fields": {
+        "name": "Telco"
+    }
+},
+{
+    "model": "kww_app.companytype",
+    "pk": 4,
+    "fields": {
+        "name": "Research & Innovation"
+    }
+},
+{
+    "model": "kww_app.companytype",
+    "pk": 5,
+    "fields": {
+        "name": "Media Broadcaster"
+    }
+},
+{
+    "model": "kww_app.companytype",
+    "pk": 6,
+    "fields": {
+        "name": "cyber-security"
+    }
+},
+{
+    "model": "kww_app.companytype",
+    "pk": 7,
+    "fields": {
+        "name": "Government"
+    }
+},
+{
+    "model": "kww_app.companytype",
+    "pk": 8,
+    "fields": {
+        "name": "Research & Development"
+    }
+},
+{
+    "model": "kww_app.companytype",
+    "pk": 9,
+    "fields": {
+        "name": "Industry"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 1,
+    "fields": {
+        "name": "Ubiwhere Lda",
+        "companytype": 8,
+        "parent": null,
+        "country": 6,
+        "created_at": "2020-07-04T14:28:15.556Z",
+        "updated_at": "2020-07-19T12:41:13.008Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 2,
+    "fields": {
+        "name": "Proef",
+        "companytype": 9,
+        "parent": null,
+        "country": 6,
+        "created_at": "2020-07-04T14:28:27.676Z",
+        "updated_at": "2020-07-19T12:42:23.730Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 3,
+    "fields": {
+        "name": "UNIVERSITY OF SOUTHAMPTON",
+        "companytype": 1,
+        "parent": null,
+        "country": 1,
+        "created_at": "2020-07-12T19:34:39.740Z",
+        "updated_at": "2020-07-12T20:12:33.832Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 4,
+    "fields": {
+        "name": "ATOS SPAIN SA",
+        "companytype": 2,
+        "parent": null,
+        "country": 2,
+        "created_at": "2020-07-12T20:13:24.599Z",
+        "updated_at": "2020-07-12T20:13:24.599Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 5,
+    "fields": {
+        "name": "INTERDIGITAL EUROPE LTD",
+        "companytype": 3,
+        "parent": null,
+        "country": 1,
+        "created_at": "2020-07-12T20:14:09.960Z",
+        "updated_at": "2020-07-12T20:14:09.960Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 6,
+    "fields": {
+        "name": "I2CAT",
+        "companytype": 4,
+        "parent": null,
+        "country": 2,
+        "created_at": "2020-07-12T20:14:34.852Z",
+        "updated_at": "2020-07-19T12:43:29.731Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 7,
+    "fields": {
+        "name": "UNIVERSITY OF BRISTOL",
+        "companytype": 1,
+        "parent": null,
+        "country": 1,
+        "created_at": "2020-07-12T20:14:51.155Z",
+        "updated_at": "2020-07-12T20:14:51.155Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 8,
+    "fields": {
+        "name": "NEXTWORKS",
+        "companytype": 3,
+        "parent": null,
+        "country": 3,
+        "created_at": "2020-07-12T20:15:16.682Z",
+        "updated_at": "2020-07-12T20:15:16.682Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 9,
+    "fields": {
+        "name": "MARTEL INNOVATE",
+        "companytype": 4,
+        "parent": null,
+        "country": 4,
+        "created_at": "2020-07-12T20:16:41.199Z",
+        "updated_at": "2020-07-12T20:16:41.200Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 10,
+    "fields": {
+        "name": "DE VLAAMSE RADIO EN TELEVISIEOMROEPORGANISATIE NV",
+        "companytype": 5,
+        "parent": null,
+        "country": 5,
+        "created_at": "2020-07-12T20:18:16.477Z",
+        "updated_at": "2020-07-12T20:18:16.477Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 11,
+    "fields": {
+        "name": "THE WALT DISNEY COMPANY GMBH",
+        "companytype": 5,
+        "parent": null,
+        "country": 4,
+        "created_at": "2020-07-12T20:18:39.979Z",
+        "updated_at": "2020-07-12T20:18:39.979Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 12,
+    "fields": {
+        "name": "EIDGENOESSISCHE TECHNISCHE HOCHSCHULE ZUERICH",
+        "companytype": 1,
+        "parent": null,
+        "country": 4,
+        "created_at": "2020-07-12T20:19:10.600Z",
+        "updated_at": "2020-07-12T20:19:10.600Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 13,
+    "fields": {
+        "name": "INSTITUT MUNICIPAL D\u2019INFORMATICA DE BARCELONA",
+        "companytype": 4,
+        "parent": null,
+        "country": 2,
+        "created_at": "2020-07-12T20:19:56.961Z",
+        "updated_at": "2020-07-12T20:19:56.961Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 14,
+    "fields": {
+        "name": "Dognaedis",
+        "companytype": 6,
+        "parent": null,
+        "country": 6,
+        "created_at": "2020-07-12T20:45:48.723Z",
+        "updated_at": "2020-07-19T12:18:48.803Z"
+    }
+},
+{
+    "model": "kww_app.company",
+    "pk": 15,
+    "fields": {
+        "name": "CM-Porto",
+        "companytype": 7,
+        "parent": null,
+        "country": 6,
+        "created_at": "2020-07-19T12:31:16.899Z",
+        "updated_at": "2020-07-19T12:31:16.899Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 1,
+    "fields": {
+        "project": 1,
+        "company": 1,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-04T14:28:30.172Z",
+        "updated_at": "2020-07-04T14:28:30.172Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 2,
+    "fields": {
+        "project": 1,
+        "company": 2,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-04T14:28:30.173Z",
+        "updated_at": "2020-07-04T14:28:30.173Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 3,
+    "fields": {
+        "project": 2,
+        "company": 1,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-04T14:29:42.203Z",
+        "updated_at": "2020-07-04T14:29:42.204Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 4,
+    "fields": {
+        "project": 4,
+        "company": 1,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T19:30:29.821Z",
+        "updated_at": "2020-07-12T19:30:29.821Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 5,
+    "fields": {
+        "project": 4,
+        "company": 1,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T19:30:29.857Z",
+        "updated_at": "2020-07-12T19:30:29.857Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 6,
+    "fields": {
+        "project": 3,
+        "company": 3,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T19:34:39.760Z",
+        "updated_at": "2020-07-12T19:34:39.760Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 7,
+    "fields": {
+        "project": 3,
+        "company": 4,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:20:01.158Z",
+        "updated_at": "2020-07-12T20:20:01.158Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 8,
+    "fields": {
+        "project": 3,
+        "company": 5,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:20:01.185Z",
+        "updated_at": "2020-07-12T20:20:01.185Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 9,
+    "fields": {
+        "project": 3,
+        "company": 6,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:20:01.207Z",
+        "updated_at": "2020-07-12T20:20:01.207Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 10,
+    "fields": {
+        "project": 3,
+        "company": 7,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:20:01.228Z",
+        "updated_at": "2020-07-12T20:20:01.228Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 11,
+    "fields": {
+        "project": 3,
+        "company": 8,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:20:01.267Z",
+        "updated_at": "2020-07-12T20:20:01.267Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 12,
+    "fields": {
+        "project": 3,
+        "company": 9,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:20:01.303Z",
+        "updated_at": "2020-07-12T20:20:01.303Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 13,
+    "fields": {
+        "project": 3,
+        "company": 10,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:20:01.330Z",
+        "updated_at": "2020-07-12T20:20:01.330Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 14,
+    "fields": {
+        "project": 3,
+        "company": 11,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:20:01.363Z",
+        "updated_at": "2020-07-12T20:20:01.363Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 15,
+    "fields": {
+        "project": 3,
+        "company": 12,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:20:01.395Z",
+        "updated_at": "2020-07-12T20:20:01.395Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 16,
+    "fields": {
+        "project": 3,
+        "company": 13,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:20:01.429Z",
+        "updated_at": "2020-07-12T20:20:01.429Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 17,
+    "fields": {
+        "project": 5,
+        "company": 1,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:35:24.538Z",
+        "updated_at": "2020-07-12T20:35:24.538Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 18,
+    "fields": {
+        "project": 6,
+        "company": 1,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:42:59.699Z",
+        "updated_at": "2020-07-12T20:42:59.699Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 19,
+    "fields": {
+        "project": 7,
+        "company": 14,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:47:01.034Z",
+        "updated_at": "2020-07-12T20:47:01.034Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 20,
+    "fields": {
+        "project": 7,
+        "company": 14,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:47:01.106Z",
+        "updated_at": "2020-07-12T20:47:01.106Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 21,
+    "fields": {
+        "project": 9,
+        "company": 15,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-19T12:31:56.150Z",
+        "updated_at": "2020-07-19T12:31:56.150Z"
+    }
+},
+{
+    "model": "kww_app.projectcompany",
+    "pk": 22,
+    "fields": {
+        "project": 9,
+        "company": 1,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-19T12:36:32.067Z",
+        "updated_at": "2020-07-19T12:36:32.067Z"
+    }
+},
+{
+    "model": "kww_app.country",
+    "pk": 1,
+    "fields": {
+        "country": "United Kingdom)"
+    }
+},
+{
+    "model": "kww_app.country",
+    "pk": 2,
+    "fields": {
+        "country": "Spain"
+    }
+},
+{
+    "model": "kww_app.country",
+    "pk": 3,
+    "fields": {
+        "country": "Italy"
+    }
+},
+{
+    "model": "kww_app.country",
+    "pk": 4,
+    "fields": {
+        "country": "Switzerland"
+    }
+},
+{
+    "model": "kww_app.country",
+    "pk": 5,
+    "fields": {
+        "country": "Belgium"
+    }
+},
+{
+    "model": "kww_app.country",
+    "pk": 6,
+    "fields": {
+        "country": "Portugal"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 1,
+    "fields": {
+        "name": "streaming",
+        "slug": "streaming"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 2,
+    "fields": {
+        "name": "protocol",
+        "slug": "protocol"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 3,
+    "fields": {
+        "name": "HTTP",
+        "slug": "http"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 4,
+    "fields": {
+        "name": "Framework",
+        "slug": "framework"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 5,
+    "fields": {
+        "name": "Python",
+        "slug": "python"
+    }
+},
+{
+    "model": "taggit.tag",
+    "pk": 6,
+    "fields": {
+        "name": "backoffice",
+        "slug": "backoffice"
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 1,
+    "fields": {
+        "tag": 1,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 13
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 2,
+    "fields": {
+        "tag": 2,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 13
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 3,
+    "fields": {
+        "tag": 3,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 12
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 4,
+    "fields": {
+        "tag": 4,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 15
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 5,
+    "fields": {
+        "tag": 4,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 26
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 6,
+    "fields": {
+        "tag": 5,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 26
+    }
+},
+{
+    "model": "taggit.taggeditem",
+    "pk": 7,
+    "fields": {
+        "tag": 6,
+        "content_type": [
+            "kww_app",
+            "technology"
+        ],
+        "object_id": 27
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$180000$sq78biqvLndm$zoG6FiAfVv1M1LA6xEZmK5w+Tckgzxen3T4DbnWKlsU=",
+        "last_login": "2020-07-04T14:22:46.541Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "diogo.gomes77@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-07-04T14:22:38.656Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$180000$TCTzYjmirSXn$zG631w5NXINL2G4/UyR4msxbgoge94vqI8SzKsGRlv8=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "dgomes",
+        "first_name": "Diogo",
+        "last_name": "Gomes",
+        "email": "diogo.gomes.estg@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-07-04T14:29:00Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "h8sa0frlltpcw8nesm9lpd64a2fkrore",
+    "fields": {
+        "session_data": "MmYxM2Y2ZGFiMjA0YjdiMzA4N2MxNzRlOWRjYjA0OGUzNjhjZDUwMzp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5ODYyNWU2N2UzZmNkYzYwNDNhOWQ0MTQ5YTVlODFmNjNkNTJlYmFjIn0=",
+        "expire_date": "2020-07-26T18:43:54.575Z"
+    }
+},
+{
+    "model": "kww_app.participant",
+    "fields": {
+        "user_ptr": [
+            "dgomes"
+        ],
+        "created_at": "2020-07-04T14:29:20.929Z",
+        "updated_at": "2020-07-12T18:49:51.337Z",
+        "photo": ""
+    }
+},
+{
+    "model": "kww_app.hasjob",
+    "pk": 1,
+    "fields": {
+        "participant": [
+            "dgomes"
+        ],
+        "company": 1,
+        "role": 1,
+        "onboard": "2018-10-12",
+        "offboard": null
+    }
+},
+{
+    "model": "kww_app.projectparticipation",
+    "pk": 1,
+    "fields": {
+        "project": 2,
+        "participant": [
+            "dgomes"
+        ],
+        "role": 1,
+        "company": 1,
+        "start": "2019-11-01",
+        "end": null,
+        "created_at": "2020-07-04T14:29:42.190Z",
+        "updated_at": "2020-07-04T15:22:02.521Z"
+    }
+},
+{
+    "model": "kww_app.projectparticipation",
+    "pk": 2,
+    "fields": {
+        "project": 4,
+        "participant": [
+            "dgomes"
+        ],
+        "role": 2,
+        "company": 1,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T19:30:29.737Z",
+        "updated_at": "2020-07-12T20:34:13.654Z"
+    }
+},
+{
+    "model": "kww_app.projectparticipation",
+    "pk": 3,
+    "fields": {
+        "project": 6,
+        "participant": [
+            "dgomes"
+        ],
+        "role": 2,
+        "company": 1,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:42:59.621Z",
+        "updated_at": "2020-07-19T13:17:57.583Z"
+    }
+},
+{
+    "model": "kww_app.projectparticipation",
+    "pk": 4,
+    "fields": {
+        "project": 7,
+        "participant": [
+            "dgomes"
+        ],
+        "role": 1,
+        "company": 14,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:47:00.953Z",
+        "updated_at": "2020-07-12T20:47:00.953Z"
+    }
+},
+{
+    "model": "kww_app.projectparticipation",
+    "pk": 5,
+    "fields": {
+        "project": 7,
+        "participant": [
+            "dgomes"
+        ],
+        "role": 3,
+        "company": 14,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-12T20:47:01.071Z",
+        "updated_at": "2020-07-12T20:47:01.072Z"
+    }
+},
+{
+    "model": "kww_app.projectparticipation",
+    "pk": 6,
+    "fields": {
+        "project": 9,
+        "participant": [
+            "dgomes"
+        ],
+        "role": 1,
+        "company": 1,
+        "start": null,
+        "end": null,
+        "created_at": "2020-07-19T12:36:31.976Z",
+        "updated_at": "2020-07-19T12:57:14.580Z"
+    }
+}
+]

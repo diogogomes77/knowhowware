@@ -12,6 +12,7 @@ class Technology(models.Model):
         verbose_name_plural = "technologies"
 
     name = models.CharField(max_length=64)
+    content = RichTextField(config_name='example', null=True, blank=True)
     parents = models.ManyToManyField(
         'self', blank=True,
         through='ParentTechnology',

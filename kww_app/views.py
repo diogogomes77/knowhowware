@@ -54,7 +54,7 @@ class ProjectDetailView(generic.DetailView):
 
 class ParticipationListView(generic.ListView):
     model = ProjectParticipation
-    template_name = 'kww_app/project-participation_list.html'
+    template_name = 'kww_app/projectparticipation_list.html'
     context_object_name = 'participation_list'
     queryset = ProjectParticipation.objects.all()# [:5]
     paginate_by = 5

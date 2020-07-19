@@ -35,3 +35,4 @@ add to the through model an explanation about how the tech was used in the proje
 - [x] Multiple links (using generic many-to-many rels)
 - [ ] ElasticSearch
 - [ ] Google Cloud
+- [ ] Calculate inserted data percentage completion
