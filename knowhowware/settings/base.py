@@ -65,6 +65,7 @@ THIRD_PARTY_APPS = [
     'channels',
     'drf_yasg',
     'debug_toolbar',
+    'django_extensions'
 ]
 
 LOCAL_APPS = [

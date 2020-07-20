@@ -7,6 +7,8 @@ RUN apt-get update && apt-get install -y \
 postgresql-client \
 libffi-dev \
 make \
+libgraphviz-dev \
+python-pygraphviz \
 && rm -rf /var/lib/apt/lists/*
 # Copy over private key, and set permissions
 #ADD deploy-key /root/.ssh/id_rsa

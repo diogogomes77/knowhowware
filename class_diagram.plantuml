@@ -1,0 +1,86 @@
+@startuml
+
+title Relationships - Class Diagram
+
+class Project {
+}
+
+class ProjectType {
+}
+
+class User {
+}
+
+class Participant {
+}
+
+class ProjectParticipation {
+}
+
+class ProjectParticipationIssue {
+}
+
+class Role {
+}
+
+class HasJob {
+}
+
+class ProjectCompany {
+}
+
+class Company {
+}
+
+class CompanyType {
+}
+
+class Country {
+}
+
+class Technology {
+}
+
+class TechnologyIssue {
+}
+
+class ParentTechnology {
+}
+
+class TechnologyUse {
+}
+
+User <|-down- Participant
+
+Project *-down ProjectParticipation
+Project o--down ProjectType
+Project o.-up Project
+
+ProjectParticipation o-down Participant
+
+ProjectParticipation *--down TechnologyUse
+
+ProjectParticipation *.-down ProjectParticipationIssue
+ProjectParticipation o--down Role
+
+Participant *-down HasJob
+HasJob o-down Role
+HasJob o-down Company
+
+ProjectParticipationIssue *--down TechnologyIssue
+TechnologyIssue o--down Technology
+
+Technology *.-down ParentTechnology
+
+TechnologyUse o--down Technology
+TechnologyUse o--down Participant
+
+Company *--down ProjectCompany
+ProjectCompany o-down Project
+
+Company o--down CompanyType
+Company o--down Country
+Company o.-down Company
+
+
+@enduml
