@@ -65,7 +65,7 @@ minio==5.0.10
 numpy==1.18.4
 oauth2client==1.5.2
 packaging==20.4
-Pillow==7.1.2
+Pillow==8.2.0
 protobuf==3.11.3
 psycopg2==2.8.4
 pyasn1==0.4.8
