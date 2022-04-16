@@ -8,7 +8,7 @@ postgresql-client \
 libffi-dev \
 make \
 libgraphviz-dev \
-python-pygraphviz \
+# python-pygraphviz \
 && rm -rf /var/lib/apt/lists/*
 # Copy over private key, and set permissions
 #ADD deploy-key /root/.ssh/id_rsa

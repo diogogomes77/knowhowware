@@ -100,5 +100,5 @@ whitenoise==5.0.1
 zipp==3.1.0
 zope.interface==5.1.0
 django-extensions
-pygraphviz
+#pygraphviz
 plantweb
