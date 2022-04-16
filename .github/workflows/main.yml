@@ -13,5 +13,5 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: 'knowhowware2'
-          heroku_email: 'diogo.gomes.isec@gmail.com'
+          heroku_app_name: 'knowhowware'
+          heroku_email: 'diogo.gomes77@gmail.com'
