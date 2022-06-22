@@ -62,7 +62,7 @@ kombu==4.6.8
 Markdown==3.2.2
 MarkupSafe==1.1.1
 minio==5.0.10
-numpy==1.18.4
+numpy==1.22.0
 oauth2client==1.5.2
 packaging==20.4
 Pillow==7.1.2
